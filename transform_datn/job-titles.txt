@@ -1,0 +1,258 @@
+Computer systems manager
+Network architect
+Systems analyst
+IT coordinator
+Network administrator
+Network engineer
+Service desk analyst
+System administrator (also known as sysadmin)
+Wireless network engineer
+Database administrator
+Database analyst
+Data quality manager
+Database report writer
+SQL database administrator
+Big data engineer
+Business intelligence specialist/analyst
+Business systems analyst
+Data analyst
+Data analytics developer
+Data modeling analyst
+Data scientist
+Data warehouse manager
+Data warehouse programming specialist
+Intelligence specialist
+Back-end developer
+Cloud/software architect
+Cloud/software developer
+Cloud/software applications engineer
+Cloud system administrator
+Cloud system engineer
+DevOps engineer
+Front-end developer
+Full-stack developer
+Java developer
+Platform engineer
+Release manager
+Reliability engineer
+Software engineer
+Software quality assurance analyst
+UI (user interface) designer
+UX (user experience) designer
+Web developer
+Application security administrator
+Artificial intelligence security specialist
+Cloud security specialist
+Cybersecurity hardware engineer
+Cyberintelligence specialist
+Cryptographer
+Data privacy officer
+Digital forensics analyst
+IT security engineer
+Information assurance analyst
+Security systems administrator
+Help desk support specialist
+IT support specialist
+Customer service representative
+Technical product manager
+Product manager
+Project manager
+Program manager
+Portfolio manager
+Computer support specialist
+Computer technician
+Computer support technician
+Help desk worker
+Help desk analyst
+Help desk support
+Help desk technician
+Desktop support specialist
+IT support specialist
+IT technician
+Problem manager
+Operations analyst
+Technical assistance specialist
+Technical specialist
+Technical support
+Support specialist
+Computer operator
+Information technology analyst
+Systems designer
+systems analyst
+Application support analyst
+Systems analyst
+IT coordinator
+IT manager
+Solutions architect
+Web developer
+Web designer
+Web engineer
+Web producers
+Web development manager
+Web development project manager
+User experience (UX) designer
+User interface (UI) designer
+UX/UI researcher
+UX/UI specialist
+Webmaster
+Web producer
+Web project manager
+Web content manager
+Multimedia architect
+Web analytics developer
+Search engine optimization (SEO) consultant
+SEO manager
+Internet engineer
+Interaction designer
+Front-end designer
+Front-end developer
+Mobile developer
+Full-stack developer
+Technology sales consultant
+Technology manager
+Technology assistant
+Technology specialist
+Technical account manager
+IT sales executive
+IT sales director
+Business systems analyst
+Information security specialist
+Security specialist
+IT security analyst
+Network security engineer
+Information security analyst
+Information security engineer
+Information security manager
+Information security consultant
+Information security project manager
+Information security program manager
+Management information director
+Cyber security specialist
+Cyber security manager
+Computer forensic investigator
+Database administrator
+Database developer
+Database analyst
+Database manager
+Database engineer
+Database specialist
+Database coordinator
+Data quality manager
+Data modeler
+Data scientist
+Data architect
+Information architect
+Computer data scientist
+Network engineer
+Computer network specialist
+Computer systems analyst
+Computer and information research scientist
+Computer and information research manager
+Network administrator
+Network architect
+Network analyst
+Network technician
+Network operations engineer
+Network reliability engineer
+Network infrastructure specialist
+Software developer
+Software engineer
+Software architect
+Software test engineer
+Software development manager
+Software development engineer
+Artificial intelligence engineer
+Application developer
+Application designer
+Application engineer
+DevOps engineer
+Computer programmer
+Lead programmer
+Iteration manager
+Frameworks specialist
+Game developer
+Cloud engineer
+Cloud systems engineer
+Cloud computing engineer
+Cloud architect
+Cloud system administrator
+Cloud consultant
+Cloud services provider
+Cloud services developer
+Cloud product manager
+Chief information officer (CIO)
+Chief technology officer (CTO)
+IT director
+IT project manager
+Director of technology
+Technical operations officer
+Information management systems director
+IT consultant
+Technical lead
+Chief Information Officer (CIO)
+Chief Security Officer (CSO)
+Chief Information Security Officer (CISO)
+Chief Technical Officer (CTO)
+IT Director
+IT Manager
+Lead Systems Architect
+Solutions Engineer
+Technical Team Lead
+Principal Software Developer
+Cloud Strategy Specialist
+Computer Systems Manager
+Network Architect
+Systems Analyst
+IT Coordinator
+Network Administrator
+Network Engineer
+Application Security Administrator
+Artificial Intelligence Security Specialist
+Cloud Security Specialist
+Cybersecurity Hardware Engineer
+Digital Forensics Analyst
+IT Security Engineer
+Information Assurance Analyst
+Security Systems Administrator
+Cloud Architect
+Cloud/Software Developer
+Cloud/Software Applications Engineer
+Cloud System Administrator
+Cloud System Engineer
+Site Reliability Engineer (SRE)
+Software QA Analyst
+Big Data Engineer/Architect
+Business Intelligence Specialist/Analyst
+Business Systems Analyst
+Database Analyst
+SQL Database Administrator
+Database Architect
+Technical Product Manager
+Product Manager
+Project Manager
+Help Desk Technician
+IT Support Specialist
+Computer Scientist
+IT Professional
+UX Designer & UI Developer
+SQL Developer
+Web Designer
+Web Developer
+Help Desk Worker/Desktop Support
+Software Engineer
+Data Entry
+DevOps Engineer
+Computer Programmer
+Network Administrator
+Information Security Analyst
+Artificial Intelligence Engineer
+Cloud Architect
+IT Manager
+Technical Specialist
+Application Developer
+Chief Technology Officer
+Chief Information Officer
+CTO
+CIO
+CISO
+Data Engineer
