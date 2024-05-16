@@ -4,13 +4,13 @@
   "settings": {
     "width": 2000,
     "height": 2000,
-    "scrollTop": -270,
-    "scrollLeft": -59,
+    "scrollTop": -166,
+    "scrollLeft": -116,
     "zoomLevel": 0.8,
     "show": 445,
     "database": 16,
     "databaseName": "JobPostManagerment",
-    "canvasType": "ERD",
+    "canvasType": "@dineug/erd-editor/builtin-schema-sql",
     "language": 1,
     "tableNameCase": 4,
     "columnNameCase": 2,
@@ -412,7 +412,7 @@
         "tableId": "1GYpQqQxs6V1qgsVz36wO",
         "name": "company_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 11,
         "ui": {
@@ -423,7 +423,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715579512367,
+          "updateAt": 1715849489760,
           "createAt": 1715577322538
         }
       },
@@ -472,7 +472,7 @@
         "tableId": "yBMubKHyJABfHSWhzQBL2",
         "name": "skill_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 11,
         "ui": {
@@ -483,7 +483,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715579471413,
+          "updateAt": 1715849497842,
           "createAt": 1715577560923
         }
       },
@@ -532,7 +532,7 @@
         "tableId": "Plki3Tx1h9I97w0Zp2nCl",
         "name": "date_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 11,
         "ui": {
@@ -543,7 +543,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715579552309,
+          "updateAt": 1715849468108,
           "createAt": 1715578013957
         }
       },
@@ -652,7 +652,7 @@
         "tableId": "nSgwj-TSPn-1PQZjBaoaW",
         "name": "job_role_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 11,
         "ui": {
@@ -663,7 +663,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715579558828,
+          "updateAt": 1715849475086,
           "createAt": 1715579425257
         }
       },
@@ -692,7 +692,7 @@
         "tableId": "672eBxDmsMz9_zqiFa75o",
         "name": "company_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 8,
         "ui": {
@@ -703,7 +703,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715579652580,
+          "updateAt": 1715849489760,
           "createAt": 1715579652579
         }
       },
@@ -752,7 +752,7 @@
         "tableId": "672eBxDmsMz9_zqiFa75o",
         "name": "start_recruit_date_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 8,
         "ui": {
@@ -763,7 +763,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715583154241,
+          "updateAt": 1715849468108,
           "createAt": 1715579694700
         }
       },
@@ -952,7 +952,7 @@
         "tableId": "672eBxDmsMz9_zqiFa75o",
         "name": "job_role_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 8,
         "ui": {
@@ -963,7 +963,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715580735917,
+          "updateAt": 1715849475086,
           "createAt": 1715580735916
         }
       },
@@ -972,7 +972,7 @@
         "tableId": "1Lcwn4SNehdQyzgNRY-a3",
         "name": "source_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 11,
         "ui": {
@@ -983,7 +983,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715580992257,
+          "updateAt": 1715849493817,
           "createAt": 1715580808818
         }
       },
@@ -1052,7 +1052,7 @@
         "tableId": "672eBxDmsMz9_zqiFa75o",
         "name": "source_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 8,
         "ui": {
@@ -1063,7 +1063,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715581004787,
+          "updateAt": 1715849493817,
           "createAt": 1715581004787
         }
       },
@@ -1172,7 +1172,7 @@
         "tableId": "Wpe5J-Kty9VHQv6G6B425",
         "name": "skill_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 8,
         "ui": {
@@ -1183,7 +1183,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715582490825,
+          "updateAt": 1715849497842,
           "createAt": 1715582490824
         }
       },
@@ -1292,7 +1292,7 @@
         "tableId": "672eBxDmsMz9_zqiFa75o",
         "name": "end_recruit_date_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 8,
         "ui": {
@@ -1303,7 +1303,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715583187802,
+          "updateAt": 1715849468108,
           "createAt": 1715583172504
         }
       },
@@ -1372,7 +1372,7 @@
         "tableId": "l3SVEiLnY5bidvWHRxldu",
         "name": "position_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 11,
         "ui": {
@@ -1383,7 +1383,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715595528362,
+          "updateAt": 1715849483313,
           "createAt": 1715595497940
         }
       },
@@ -1452,7 +1452,7 @@
         "tableId": "l3SVEiLnY5bidvWHRxldu",
         "name": "company_id",
         "comment": "",
-        "dataType": "int",
+        "dataType": "bigint",
         "default": "",
         "options": 8,
         "ui": {
@@ -1463,7 +1463,7 @@
           "widthDefault": 60
         },
         "meta": {
-          "updateAt": 1715606634822,
+          "updateAt": 1715849489760,
           "createAt": 1715606634819
         }
       },
@@ -2229,7 +2229,7 @@
       -1,
       {
         "name": 1715577328920,
-        "dataType": 1715579512366,
+        "dataType": 1715849489759,
         "options(notNull)": 1715577334252,
         "options(primaryKey)": 1715577344308,
         "options(autoIncrement)": 1715577598858
@@ -2270,7 +2270,7 @@
       -1,
       {
         "name": 1715577567780,
-        "dataType": 1715579471412,
+        "dataType": 1715849497841,
         "options(primaryKey)": 1715577577518,
         "options(autoIncrement)": 1715577602802
       }
@@ -2319,7 +2319,7 @@
       {
         "name": 1715578025080,
         "options(autoIncrement)": 1715578198466,
-        "dataType": 1715579552309,
+        "dataType": 1715849468107,
         "options(primaryKey)": 1715579462895
       }
     ],
@@ -2376,7 +2376,7 @@
       -1,
       {
         "name": 1715579435030,
-        "dataType": 1715579544567,
+        "dataType": 1715849475085,
         "options(primaryKey)": 1715579547106,
         "options(autoIncrement)": 1715579558826
       }
@@ -2399,7 +2399,7 @@
       {
         "options(notNull)": 1715579652576,
         "name": 1715579652576,
-        "dataType": 1715579652576,
+        "dataType": 1715849489759,
         "default": 1715579652576,
         "comment": 1715579652576
       }
@@ -2453,7 +2453,7 @@
       {
         "options(notNull)": 1715579694698,
         "name": 1715583154240,
-        "dataType": 1715579694698,
+        "dataType": 1715849468107,
         "default": 1715579694698,
         "comment": 1715579694698
       }
@@ -2597,7 +2597,7 @@
       {
         "options(notNull)": 1715580735914,
         "name": 1715580735914,
-        "dataType": 1715580735914,
+        "dataType": 1715849475085,
         "default": 1715580735914,
         "comment": 1715580735914
       }
@@ -2625,7 +2625,7 @@
       {
         "name": 1715580814112,
         "options(autoIncrement)": 1715580820557,
-        "dataType": 1715580853590,
+        "dataType": 1715849493816,
         "options(primaryKey)": 1715580992256
       }
     ],
@@ -2671,7 +2671,7 @@
       {
         "options(notNull)": 1715581004785,
         "name": 1715581004785,
-        "dataType": 1715581004785,
+        "dataType": 1715849493816,
         "default": 1715581004785,
         "comment": 1715581004785
       }
@@ -2753,7 +2753,7 @@
       {
         "options(notNull)": 1715582490822,
         "name": 1715582490822,
-        "dataType": 1715582490822,
+        "dataType": 1715849497841,
         "default": 1715582490822,
         "comment": 1715582490822
       }
@@ -2827,7 +2827,7 @@
       {
         "options(notNull)": 1715583172502,
         "name": 1715583187801,
-        "dataType": 1715583172502,
+        "dataType": 1715849468107,
         "default": 1715583172502,
         "comment": 1715583172502
       }
@@ -2898,7 +2898,7 @@
       -1,
       {
         "name": 1715595515368,
-        "dataType": 1715595519262,
+        "dataType": 1715849483312,
         "options(primaryKey)": 1715595525242,
         "options(autoIncrement)": 1715595528360
       }
@@ -2946,7 +2946,7 @@
       {
         "options(notNull)": 1715606634812,
         "name": 1715606634812,
-        "dataType": 1715606634812,
+        "dataType": 1715849489759,
         "default": 1715606634812,
         "comment": 1715606634812
       }
