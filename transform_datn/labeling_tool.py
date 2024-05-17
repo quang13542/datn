@@ -45,8 +45,8 @@ class Trie:
             trie.root = pickle.load(file)
         return trie
 
-def search_in_trie(sentence):
-    sentence = sentence.lower()
+def search_in_trie(trie, sentence):
+    sentence = sentence.lower().replace(',', ' ').replace('  ', ' ')
     res = []
     i=0
     while i < len(sentence):
@@ -55,7 +55,7 @@ def search_in_trie(sentence):
             longest_sentence_j = 0
             for j in range(i+1, len(sentence)+1):
                 if j == len(sentence) or sentence[j] == ' ' or sentence[j] == '\n':
-                    sub_sentence = sentence[i:j].replace(',', '')
+                    sub_sentence = sentence[i:j]
                     # print(repr(sub_sentence))
                     # if sub_sentence == '.net core':
                     #     print('aloalo')
@@ -101,13 +101,14 @@ tmp_string = '\n'.join(df.iloc[cur_index]['job_detail_job_requirements_line']).l
 # azure copilot.
 # .net core.
 # """
+# tmp_string = "- Nẵm vững HTML,CSS,SCSS,JS"
 tmp_string = tmp_string.replace('. ', ' ').replace('.\n', '\n').replace('/ ', ' ').replace('  ', ' ')
 if tmp_string[-1] == '.':
     tmp_string = tmp_string[:-1]
 
-searched_skill = search_in_trie(tmp_string)
+searched_skill = search_in_trie(trie, tmp_string)
 print(searched_skill)
-searched_skill = search_in_trie(tmp_string)
+searched_skill = search_in_trie(trie, tmp_string)
 
 special_skill = [
     'r',
