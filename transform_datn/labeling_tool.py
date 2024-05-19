@@ -97,32 +97,32 @@ for skill in skill_list:
     file.write(skill.replace('\n', '').rstrip()+"\n")
 file.close()
 
-trie = Trie()
-for skill in skill_list:
-    trie.insert(skill)
+# trie = Trie()
+# for skill in skill_list:
+#     trie.insert(skill)
 
-tmp_string = '\n'.join(df.iloc[cur_index]['job_detail_job_requirements_line']).lower()
-# tmp_string = """
-# azure copilot.
-# .net core.
-# """
-# tmp_string = "- Nẵm vững HTML,CSS,SCSS,JS"
-tmp_string = tmp_string.replace('. ', ' ').replace('.\n', '\n').replace('/ ', ' ').replace('  ', ' ')
-if tmp_string[-1] == '.':
-    tmp_string = tmp_string[:-1]
+# tmp_string = '\n'.join(df.iloc[cur_index]['job_detail_job_requirements_line']).lower()
+# # tmp_string = """
+# # azure copilot.
+# # .net core.
+# # """
+# # tmp_string = "- Nẵm vững HTML,CSS,SCSS,JS"
+# tmp_string = tmp_string.replace('. ', ' ').replace('.\n', '\n').replace('/ ', ' ').replace('  ', ' ')
+# if tmp_string[-1] == '.':
+#     tmp_string = tmp_string[:-1]
 
-searched_skill = search_in_trie(trie, tmp_string)
-print(searched_skill)
-searched_skill = search_in_trie(trie, tmp_string)
+# searched_skill = search_in_trie(trie, tmp_string)
+# print(searched_skill)
+# searched_skill = search_in_trie(trie, tmp_string)
 
-special_skill = [
-    'r',
-    'c'
-]
+# special_skill = [
+#     'r',
+#     'c'
+# ]
 
-for skill in searched_skill:
-    pattern = re.escape(skill)
-    tmp_string = re.sub(pattern, r'\033[32m\g<0>\033[0m', tmp_string)
+# for skill in searched_skill:
+#     pattern = re.escape(skill)
+#     tmp_string = re.sub(pattern, r'\033[32m\g<0>\033[0m', tmp_string)
 
-print(tmp_string)
+# print(tmp_string)
 
