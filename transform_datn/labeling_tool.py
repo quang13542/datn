@@ -78,7 +78,8 @@ df['job_detail_job_requirements'] = df['job_detail_job_requirements'].apply(ast.
 df['job_detail_job_requirements_line'] = df['job_detail_job_requirements_line'].apply(ast.literal_eval)
 
 f = open("skill_list.txt", "r")
-skill_list = list(f)
+skill_list = f.read().split('\n')
+# print(len(skill_list))
 trie_directory = '/trie_struture'
 skill_list = [x.lower() for x in skill_list]
 
@@ -86,10 +87,14 @@ skill_list = [x.lower() for x in skill_list]
 #     skill_list.extend(x)
 
 skill_list = list(set(skill_list))
-
+# print(len(skill_list))
 file = open('skill_list.txt','w')
+skill_list.sort()
+# print(len(skill_list))
 for skill in skill_list:
-	file.write(skill.replace('\n', '').rstrip()+"\n")
+    if skill == '':
+        continue
+    file.write(skill.replace('\n', '').rstrip()+"\n")
 file.close()
 
 trie = Trie()
