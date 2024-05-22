@@ -6,7 +6,7 @@ part_time_keyword = ['bán thời gian', 'part time', 'part-time', 'part_time']
 job_level_list = ['intern', 'fresher', 'junior', 'senior']
 year_of_exp_list = ['years', 'year', 'năm kinh nghiệm']
 
-with open("TopCv_ver02.json", "r", encoding="utf-8") as json_file:
+with open("./transform_datn/TopCv_ver02.json", "r", encoding="utf-8") as json_file:
     json_data = json.load(json_file)
     
 url_list = list(json_data.keys())
@@ -115,4 +115,4 @@ df_dictionary = pd.DataFrame([{
     "job_detail_job_level": job['job_detail'].get('job_level'),
 } for job in data])
 df = pd.DataFrame.from_dict(df_dictionary)
-df.to_csv('extracted_TopCV.csv', index=False)
+df.to_csv('./transform_datn/extracted_TopCV.csv', index=False)

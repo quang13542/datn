@@ -16,7 +16,7 @@ extracted_field_list = [
     "requirements_arr.value"
 ]
 
-with open("TopDev_ver02.json", "r", encoding="utf-8") as json_file:
+with open("./transform_datn/TopDev_ver02.json", "r", encoding="utf-8") as json_file:
     json_data = json.load(json_file)
 
 for post_url in json_data.keys():

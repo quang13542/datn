@@ -10,11 +10,11 @@ import time
 from datetime import datetime
 import json
 
-with open("TopCV_list_url", "rb") as fp:
+with open("./crawler_datn/TopCV_list_url", "rb") as fp:
     url_list = pickle.load(fp)
 
 try:
-    with open("TopCv_ver02.json", "r", encoding="utf-8") as json_file:
+    with open("./crawler_datn/TopCv_ver02.json", "r", encoding="utf-8") as json_file:
         json_data = json.load(json_file)
 except:
     json_data = {}
@@ -24,7 +24,7 @@ crawled_url_list = json_data.keys()
 url_list = [url for url in url_list if url not in crawled_url_list]
 
 print(len(url_list))
-json_file_path = "TopCv_ver02.json"
+json_file_path = "./crawler_datn/TopCv_ver02.json"
 count=0
 for url in url_list:
     try:

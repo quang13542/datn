@@ -10,10 +10,10 @@ import time
 from datetime import datetime
 import json
 
-with open("TopDev_list_url", "rb") as fp:
+with open("./crawler_datn/TopDev_list_url", "rb") as fp:
     url_list = pickle.load(fp)
 
-with open("TopDev.json", "r", encoding="utf-8") as json_file:
+with open("./crawler_datn/TopDev.json", "r", encoding="utf-8") as json_file:
     json_data = json.load(json_file)
 
 crawled_url_list = json_data.keys()
@@ -50,7 +50,7 @@ for url in url_list:
         print(url)
         continue
 
-json_file_path = "TopDev.json"
+json_file_path = "./crawler_datn/TopDev.json"
 
 with open(json_file_path, "w", encoding="utf-8") as json_file:
     json.dump(json_data, json_file, ensure_ascii=False, indent=4)

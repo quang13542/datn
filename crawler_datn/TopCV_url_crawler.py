@@ -41,7 +41,7 @@ while True:
 
 # print(url_list)
 
-with open("TopCV_list_url", "wb") as fp:
+with open("./crawler_datn/TopCV_list_url", "wb") as fp:
     pickle.dump(url_list, fp)
 
 driver.quit()

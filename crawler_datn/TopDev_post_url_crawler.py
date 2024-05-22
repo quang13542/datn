@@ -35,7 +35,7 @@ for i in range(100):
     print('Done')
     # break
 
-json_file_path = "TopDev_ver02.json"
+json_file_path = "./crawler_datn/TopDev_ver02.json"
 
 with open(json_file_path, "w", encoding="utf-8") as json_file:
     json.dump(post_dict, json_file, ensure_ascii=False, indent=4)

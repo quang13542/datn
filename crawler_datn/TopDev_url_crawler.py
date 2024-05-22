@@ -28,7 +28,7 @@ for crawl_time in range(3):
         href = post.get_attribute('href')
         url_list.append(href)
 
-    with open("TopDev_list_url", "wb") as fp:
+    with open("./crawler_datn/TopDev_list_url", "wb") as fp:
         pickle.dump(url_list, fp)
     print(len(url_list))
     driver.quit()

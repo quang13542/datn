@@ -73,7 +73,7 @@ def search_in_trie(trie, sentence):
 
 cur_index = 4
 
-df = pd.read_csv('extracted_ITjobs.csv')
+df = pd.read_csv('./transform_datn/extracted_ITjobs.csv')
 df['job_detail_job_requirements'] = df['job_detail_job_requirements'].apply(ast.literal_eval)
 df['job_detail_job_requirements_line'] = df['job_detail_job_requirements_line'].apply(ast.literal_eval)
 
@@ -88,7 +88,7 @@ skill_list = [x.lower() for x in skill_list]
 
 skill_list = list(set(skill_list))
 # print(len(skill_list))
-file = open('skill_list.txt','w')
+file = open('./transform_datn/skill_list.txt','w')
 skill_list.sort()
 # print(len(skill_list))
 for skill in skill_list:

@@ -27,7 +27,7 @@ url_list.extend([post.get_attribute('href') for post in list_post])
 
 # print(url_list)
 
-with open("ITjobs_list_url", "wb") as fp:
+with open("./crawler_datn/ITjobs_list_url", "wb") as fp:
     pickle.dump(url_list, fp)
 
 # driver.get(url_list[0])

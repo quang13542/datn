@@ -2,6 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String, Date, Boolean, Bi
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from datetime import datetime
+from psycopg2 import connect, sql
 from dotenv import dotenv_values
 
 config = dotenv_values(".env")
@@ -139,5 +140,28 @@ class FactJobPost(Base):
         self.job_type = job_type
         self.inserted_date = inserted_date
 
-engine = create_engine(f'postgresql://{config.USERNAME}:{config.PASSWORD}@localhost:5432/JobPostManagement')
-Base.metadata.create_all(engine)
+db_name = "JobPostManagement"
+
+def create_database_if_not_exists(dbname, user, password, host='localhost', port=5432):
+    conn = connect(dbname='postgres', user=user, password=password, host=host, port=port)
+    conn.autocommit = True
+    cur = conn.cursor()
+    
+    cur.execute("SELECT 1 FROM pg_catalog.pg_database WHERE datname = %s", (dbname,))
+    exists = cur.fetchone()
+    
+    if not exists:
+        cur.execute(sql.SQL("CREATE DATABASE {}").format(sql.Identifier(dbname)))
+        print(f"Database {dbname} created.")
+    else:
+        print(f"Database {dbname} already exists.")
+    
+    cur.close()
+    conn.close()
+
+def create_database_structure():
+    create_database_if_not_exists(db_name, config["USERNAME"], config["PASSWORD"])
+
+    engine = create_engine(f'postgresql://{config["USERNAME"]}:{config["PASSWORD"]}@localhost:5432/JobPostManagement')
+    Base.metadata.create_all(engine)
+    print('Schema have been added')

@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from datetime import datetime
 import json
 
-with open("ITjobs_list_url", "rb") as fp:
+with open("./crawler_datn/ITjobs_list_url", "rb") as fp:
     url_list = pickle.load(fp)
 
 json_data = {}
@@ -37,7 +37,7 @@ for url in url_list:
         print(url)
         continue
 
-json_file_path = "ITjobs.json"
+json_file_path = "./crawler_datn/ITjobs.json"
 
 with open(json_file_path, "w", encoding="utf-8") as json_file:
     json.dump(json_data, json_file, ensure_ascii=False, indent=4)
