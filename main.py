@@ -1,5 +1,6 @@
 import sys,os
 from load_datn.models import create_database_structure
+from load_datn.load import test_company, combine_data
 
 sys.path.append(os.getcwd())
 
