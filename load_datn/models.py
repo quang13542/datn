@@ -1,9 +1,25 @@
-from sqlalchemy import create_engine, Column, Integer, String, Date, Boolean, BigInteger, ForeignKey, Identity
+from sqlalchemy import (
+    Column,
+    Integer,
+    String,
+    Date,
+    Boolean,
+    BigInteger,
+    ForeignKey,
+    Identity,
+    DateTime
+)
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from datetime import datetime
 from psycopg2 import connect, sql
 from dotenv import dotenv_values
+from metadata import (
+    USERNAME,
+    PASSWORD,
+    DB_NAME,
+    engine
+)
 
 config = dotenv_values(".env")
 
@@ -24,7 +40,7 @@ class DimCompany(Base):
 class DimDate(Base):
     __tablename__ = 'dim_date'
     date_id = Column(BigInteger, primary_key=True, autoincrement=True)
-    date = Column(Date, default=datetime.now().date())
+    date = Column(DateTime, default=datetime.now())
     day = Column(Integer)
     month = Column(Integer)
     year = Column(Integer)
@@ -56,14 +72,16 @@ class DimPosition(Base):
     position_id = Column(BigInteger, primary_key=True, autoincrement=True, comment='sub dimension table')
     company_id = Column(BigInteger, ForeignKey('dim_company.company_id'), nullable=False)
     city = Column(String(100))
-    detail_position = Column(String(100))
+    detail_position = Column(String(255))
     inserted_date = Column(Date, default=datetime.now().date())
+    region = Column(String(20))
     company = relationship('DimCompany')
 
-    def __init__(self, company_id, city, detail_position, inserted_date=None):
+    def __init__(self, company_id, city, detail_position, region, inserted_date=None):
         self.company_id = company_id
         self.city = city
         self.detail_position = detail_position
+        self.region = region
         self.inserted_date = inserted_date
 
 class DimSkill(Base):
@@ -80,7 +98,7 @@ class DimSkill(Base):
 
 class DimSkillList(Base):
     __tablename__ = 'dim_skill_list'
-    skill_job_post_id = Column(BigInteger, primary_key=True)
+    skill_job_post_id = Column(BigInteger, primary_key=True, autoincrement=True)
     job_post_id = Column(BigInteger, ForeignKey('fact_job_post.job_post_id'), nullable=False)
     skill_id = Column(BigInteger, ForeignKey('dim_skill.skill_id'), nullable=False)
     core_skill = Column(Boolean, default=True)
@@ -88,8 +106,7 @@ class DimSkillList(Base):
     job_post = relationship('FactJobPost')
     skill = relationship('DimSkill')
 
-    def __init__(self, skill_job_post_id, job_post_id, skill_id, core_skill=True, inserted_date=None):
-        self.skill_job_post_id = skill_job_post_id
+    def __init__(self, job_post_id, skill_id, core_skill=True, inserted_date=None):
         self.job_post_id = job_post_id
         self.skill_id = skill_id
         self.core_skill = core_skill
@@ -112,7 +129,7 @@ class FactJobPost(Base):
     job_post_id = Column(BigInteger, primary_key=True, autoincrement=True, comment='job post fact table')
     company_id = Column(BigInteger, ForeignKey('dim_company.company_id'), nullable=False)
     start_recruit_date_id = Column(BigInteger, ForeignKey('dim_date.date_id'), nullable=False)
-    end_recruit_date_id = Column(BigInteger, ForeignKey('dim_date.date_id'), nullable=False)
+    end_recruit_date_id = Column(BigInteger, ForeignKey('dim_date.date_id'), nullable=True)
     job_role_id = Column(BigInteger, ForeignKey('dim_job_role.job_role_id'), nullable=False)
     source_id = Column(BigInteger, ForeignKey('dim_source.source_id'), nullable=False)
     salary_max = Column(BigInteger)
@@ -140,8 +157,6 @@ class FactJobPost(Base):
         self.job_type = job_type
         self.inserted_date = inserted_date
 
-db_name = "JobPostManagement"
-
 def create_database_if_not_exists(dbname, user, password, host='localhost', port=5432):
     conn = connect(dbname='postgres', user=user, password=password, host=host, port=port)
     conn.autocommit = True
@@ -160,8 +175,7 @@ def create_database_if_not_exists(dbname, user, password, host='localhost', port
     conn.close()
 
 def create_database_structure():
-    create_database_if_not_exists(db_name, config["USERNAME"], config["PASSWORD"])
+    create_database_if_not_exists(DB_NAME, USERNAME, PASSWORD)
 
-    engine = create_engine(f'postgresql://{config["USERNAME"]}:{config["PASSWORD"]}@localhost:5432/JobPostManagement')
     Base.metadata.create_all(engine)
     print('Schema have been added')
