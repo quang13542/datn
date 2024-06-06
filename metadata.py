@@ -8,7 +8,6 @@ USERNAME = config["USERNAME"]
 PASSWORD = config["PASSWORD"]
 URL_DATABASE = config["URL_DATABASE"]
 DB_NAME = config["DB_NAME"]
-SUPERSET_SECRET_KEY = config["SUPERSET_SECRET_KEY"]
 URI = f'postgresql://{USERNAME}:{PASSWORD}@{URL_DATABASE}:5432/JobPostManagement'
 
 engine = create_engine(URI)
