@@ -5,6 +5,7 @@ from datetime import datetime
 import ast
 import os
 from tqdm import tqdm
+from geoapivietnam import Correct
 
 from load_datn.models import (
     DimCompany,
@@ -74,8 +75,8 @@ def upsert_data():
     for company in unique_company_list:
         if company[0].lower() not in existing_companies:
             new_company = DimCompany(
+                size=str(company[1]),
                 name=company[0].lower(),
-                size = company[1],
                 inserted_date=datetime.now().date()
             )
             new_company_name_list.append(company[0].lower())
@@ -203,8 +204,9 @@ def upsert_data():
     df['skill_id'] = df['job_detail_extracted_skill'].map(lambda skill_list: [skill_dict[x.lower()] for x in skill_list])
     
     # upsert position
+    correct = Correct(use_fuzzy=True, print_result=True)
     df['company_position'] = df['company_position'].apply(get_first_element)
-
+    df['company_position'] = df['company_position'].fillna(value='unknown')
     company_position_list = df[['company_position']].value_counts().index.values.tolist()
     company_position_list = [' '.join(company_position) for company_position in company_position_list]
     query = session.query(DimPosition).filter(DimPosition.detail_position.in_(company_position_list))
@@ -221,13 +223,12 @@ def upsert_data():
         company_position_dict[company_position.detail_position] = company_position.position_id
     for company_position in unique_company_position_list:
         if company_position[0] not in existing_company_positions:
-            city = find_city(company_position[0])
+            city = correct.correct_province(company_position[0].split(',')[-1])
             region = assign_region(city)
             new_company_position = DimPosition(
                 detail_position=company_position[0],
                 city=city,
                 region=region,
-                company_id=company_position[1],
                 inserted_date=datetime.now().date()
             )
             new_company_position_name_list.append(company_position[0])
@@ -336,8 +337,13 @@ def upsert_data():
         'job_detail_hybrid',
         'job_detail_full_time',
         'job_detail_part_time',
-        'job_detail_remote'
+        'job_detail_remote',
+        'company_position_id'
     ]].value_counts().index.values.tolist()
+    # print(len(unique_record_list))
+    # print(df.count())
+    # print(df[df['company_position_id'].isna()]['url'])
+    # print(df.iloc[6287]['company_position'])
     insert_count = 0
     job_post_dict = {}
     new_job_post_list = []
@@ -370,7 +376,8 @@ def upsert_data():
                 job_type=job_type,
                 salary_max=job_post[5],
                 salary_min=job_post[6],
-                years_of_experience=job_post[7]
+                years_of_experience=job_post[7],
+                position_id=job_post[12]
             )
             new_job_post_list.append((
                 new_job_post.company_id,

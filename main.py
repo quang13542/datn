@@ -8,7 +8,8 @@ from visual_datn.Descriptive import (
     visual_yoe,
     test,
     visual_salary_analysis,
-    visual_word_cloud
+    visual_word_cloud,
+    visual_map,
 )
 
 sys.path.append(os.getcwd())

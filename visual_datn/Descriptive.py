@@ -10,26 +10,91 @@ from io import BytesIO
 import base64
 from sqlalchemy import func
 import matplotlib.pyplot as plt
-import requests
+import json
+import matplotlib.colors as mcolors
+import svgwrite
+from svgwrite import cm, mm
+import numpy as np
 
 from load_datn.models import (
     DimSource,
     FactJobPost,
     DimSkillList,
     DimSkill,
-    DimJobRole
+    DimJobRole,
+    DimCompany,
+    DimPosition
 )
 
-url = "https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries/VNM.geojson"
-vietnam_geojson = requests.get(url).json()
 colors = pcolors.qualitative.Plotly
 
 def test():
-    visual_data = session.query(
-        FactJobPost.job_level, FactJobPost.years_of_experience
-    )
+    correction = {'Cần Thơn': 'Cần Thơ', 'An Giang': 'An Giang', 'Bắc Ninh': 'Bắc Ninh', 'Lạng Sơn': 'Lạng Sơn', 'Khánh Hòa': 'Khánh Hòa', 'Phú Yên': 'Phú Yên', 'Hà Tĩnh': 'Hà Tĩnh', 'Bình Dương': 'Bình Dương', 'Phú Thọ': 'Phú Thọ', 'Vĩnh Long': 'Vĩnh Long', 'Đồng Nai': 'Đồng Nai', 'Hải Dương': 'Hải Dương', 'Tuyên Quang': 'Tuyên Quang', 'Tây Ninh': 'Tây Ninh', 'Gia Lai': 'Gia Lai', 'Yên Bái': 'Yên Bái', 'Đà Nẵng': 'Đà Nẵng', 'Thái Bình': 'Thái Bình', 'Thừa Thiên Huế': 'Thừa Thiên Huế', 'Hưng Yên': 'Hưng Yên', 'Đồng Tháp': 'Đồng Tháp', 'TP. Hồ Chí Minh': 'Hồ Chí Minh', 'Bình Định': 'Bình Định', 'Lào Cai': 'Lào Cai', 'Quảng Ngãi': 'Quảng Ngãi', 'Sóc Trăng': 'Sóc Trăng', 'Nghệ An': 'Nghệ An', 'Bình Thuận': 'Bình Thuận', 'Thái Nguyên': 'Thái Nguyên', 'Bắc Kạn': 'Bắc Kạn', 'Kien Giang': 'Kiên Giang', 'Kon Tum': 'Kon Tum', 'Bình Phước': 'Bình Phước', 'Đăk Nông': 'Đắk Nông', 'Bạc Liêu': 'Bạc Liêu', 'Quản Bình': 'Quảng Bình', 'Hà Nam': 'Hà Nam', 'Trà Vinh': 'Trà Vinh', 'Quảng Ninh': 'Quảng Ninh', 'Cà Mau': 'Cà Mau', 'Tiền Giang': 'Tiền Giang', 'Đăk Lăk': 'Đắk Lắk', 'Cao Bằng': 'Cao Bằng', 'Hải Phòng': 'Hải Phòng', 'Bắc Giang': 'Bắc Giang', 'Quảng Trị': 'Quảng Trị', 'Hòa Bình': 'Hòa Bình', 'Lâm Đồng': 'Lâm Đồng', 'Lai Châu': 'Lai Châu', 'Thanh Hóa': 'Thanh Hóa', 'Bà Rịa -Vũng Tàu': 'Bà Rịa - Vũng Tàu', 'Ninh Bình': 'Ninh Bình', 'Ninh Thuận': 'Ninh Thuận', 'Vĩnh Phúc': 'Vĩnh Phúc', 'Hà Giang': 'Hà Giang', 'Bến Tre': 'Bến Tre', 'Long An': 'Long An', 'Nam Định': 'Nam Định', 'Sơn La': 'Sơn La', 'Quảng Nam': 'Quảng Nam', 'Hậu Giang': 'Hậu Giang', 'Điện Biên': 'Điện Biên', 'Hà Nội': 'Hà Nội'}
+    # job_post_region_counts = session.query(
+    #     DimPosition.region,
+    #     func.count(DimPosition.region).label('count')
+    # ).join(FactJobPost, FactJobPost.position_id == DimPosition.position_id) \
+    # .group_by(DimPosition.region) \
+    # .order_by(func.count(DimPosition.region).desc()) \
+    # .all()
+    # job_post_region = {}
+    # for region in job_post_region_counts:
+    #     job_post_region[region[0]] = region[1]
+    # # print(job_post_region_counts)
+    # job_post_city_counts = session.query(
+    #     DimPosition.city,
+    #     func.count(DimPosition.city).label('count')
+    # ).join(FactJobPost, FactJobPost.position_id == DimPosition.position_id) \
+    # .group_by(DimPosition.city) \
+    # .order_by(func.count(DimPosition.city).desc()) \
+    # .all()
+    # job_post_city_df = pd.DataFrame(list(job_post_city_counts), columns=['city', 'count'])
+    # # print(job_post_city_counts)
+    # job_post_city = {}
+    # for city in job_post_city_counts:
+    #     job_post_city[city[0]] = city[1]
 
-    print(visual_data[0])
+    # with open('./visual_datn/vn-projected.json') as f:
+    #     geo = json.load(f)
+    
+    # for feature in geo['features']:
+    #     name = feature['properties']['ten_tinh']
+    #     if name in correction:
+    #         # correct province's name if needed
+    #         feature['properties']['ten_tinh'] = correction[name]
+    #         name = correction[name]
+        
+    #     # add density property and remove unused others
+    #     feature['properties']['job_post_city'] = job_post_city.get(name, 0)
+    #     del feature['properties']['gid']
+    #     del feature['properties']['code']
+
+    # fig = px.choropleth_mapbox(
+    #     job_post_city_df,
+    #     geojson=geo,
+    #     locations='province',
+    #     featureidkey="properties.ten_tinh",
+    #     color='job_post_city',
+    #     color_continuous_scale="Viridis",
+    #     mapbox_style="carto-positron",
+    #     zoom=4,
+    #     center={"lat": 14.0583, "lon": 108.2772},
+    #     opacity=0.5,
+    #     labels={'job_post_city': 'job_post_city'}
+    # )
+
+    # fig.update_geos(fitbounds="locations", visible=False)
+
+    # # Create a Dash app
+    # app = Dash(__name__)
+
+    # app.layout = html.Div([
+    #     html.H1("Vietnam Provincial Map Chart"),
+    #     dcc.Graph(id='map-chart', figure=fig)
+    # ])
+
+def normalize(value, min_value, max_value):
+    return (value - min_value) / (max_value - min_value)
 
 def visual_yoe():
     app = Dash(__name__)
@@ -214,10 +279,8 @@ def visual_word_cloud():
     .order_by(func.count(DimSkillList.skill_id).desc()) \
     .all()
 
-    # Convert to DataFrame
     skill_df = pd.DataFrame(skill_counts, columns=['skill', 'count'])
 
-    # Query to count job roles
     job_role_counts = session.query(
         DimJobRole.name,
         func.count(DimJobRole.job_role_id).label('count')
@@ -225,17 +288,13 @@ def visual_word_cloud():
     .order_by(func.count(DimJobRole.job_role_id).desc()) \
     .all()
 
-    # Convert to DataFrame
     job_role_df = pd.DataFrame(job_role_counts, columns=['job_role', 'count'])
 
-    # Generate word clouds
     skill_wordcloud_image = generate_wordcloud(skill_df, 'skill')
     job_role_wordcloud_image = generate_wordcloud(job_role_df, 'job_role')
 
-    # Create Dash app
     app = Dash(__name__)
 
-    # Layout of the Dash app
     app.layout = html.Div([
         html.H1("Word Clouds for Skills and Job Roles"),
         html.Div([
@@ -246,6 +305,127 @@ def visual_word_cloud():
             html.H2("Job Role Word Cloud"),
             html.Img(src=job_role_wordcloud_image)
         ])
+    ])
+
+    return app
+
+def scale_coordinates(coordinates, scale_factor=1):
+    return [(x * scale_factor, y * scale_factor) for x, y in coordinates]
+
+def read_svg(svg_file):
+    with open(svg_file, 'rb') as f:
+        svg_data = f.read()
+    svg_base64 = base64.b64encode(svg_data).decode('utf-8')
+    return f"data:image/svg+xml;base64,{svg_base64}"
+
+def sqrt_scale(value, min_value, max_value):
+    norm_value = (value - min_value) / (max_value - min_value)
+    sqrt_value = np.sqrt(norm_value)
+    return sqrt_value
+
+def get_color(density, thresholds, colors):
+    for i, threshold in enumerate(thresholds):
+        if density <= threshold:
+            return colors[i]
+    return colors[-1]
+
+def visual_map():
+    correction = {
+        'Cần Thơn': 'Cần Thơ', 'An Giang': 'An Giang', 'Bắc Ninh': 'Bắc Ninh', 'Lạng Sơn': 'Lạng Sơn', 
+        'Khánh Hòa': 'Khánh Hòa', 'Phú Yên': 'Phú Yên', 'Hà Tĩnh': 'Hà Tĩnh', 'Bình Dương': 'Bình Dương', 
+        'Phú Thọ': 'Phú Thọ', 'Vĩnh Long': 'Vĩnh Long', 'Đồng Nai': 'Đồng Nai', 'Hải Dương': 'Hải Dương', 
+        'Tuyên Quang': 'Tuyên Quang', 'Tây Ninh': 'Tây Ninh', 'Gia Lai': 'Gia Lai', 'Yên Bái': 'Yên Bái', 
+        'Đà Nẵng': 'Đà Nẵng', 'Thái Bình': 'Thái Bình', 'Thừa Thiên Huế': 'Thừa Thiên Huế', 'Hưng Yên': 'Hưng Yên', 
+        'Đồng Tháp': 'Đồng Tháp', 'TP. Hồ Chí Minh': 'Hồ Chí Minh', 'Bình Định': 'Bình Định', 'Lào Cai': 'Lào Cai', 
+        'Quảng Ngãi': 'Quảng Ngãi', 'Sóc Trăng': 'Sóc Trăng', 'Nghệ An': 'Nghệ An', 'Bình Thuận': 'Bình Thuận', 
+        'Thái Nguyên': 'Thái Nguyên', 'Bắc Kạn': 'Bắc Kạn', 'Kien Giang': 'Kiên Giang', 'Kon Tum': 'Kon Tum', 
+        'Bình Phước': 'Bình Phước', 'Đăk Nông': 'Đắk Nông', 'Bạc Liêu': 'Bạc Liêu', 'Quản Bình': 'Quảng Bình', 
+        'Hà Nam': 'Hà Nam', 'Trà Vinh': 'Trà Vinh', 'Quảng Ninh': 'Quảng Ninh', 'Cà Mau': 'Cà Mau', 'Tiền Giang': 'Tiền Giang', 
+        'Đăk Lăk': 'Đắk Lắk', 'Cao Bằng': 'Cao Bằng', 'Hải Phòng': 'Hải Phòng', 'Bắc Giang': 'Bắc Giang', 
+        'Quảng Trị': 'Quảng Trị', 'Hòa Bình': 'Hòa Bình', 'Lâm Đồng': 'Lâm Đồng', 'Lai Châu': 'Lai Châu', 
+        'Thanh Hóa': 'Thanh Hóa', 'Bà Rịa -Vũng Tàu': 'Bà Rịa - Vũng Tàu', 'Ninh Bình': 'Ninh Bình', 
+        'Ninh Thuận': 'Ninh Thuận', 'Vĩnh Phúc': 'Vĩnh Phúc', 'Hà Giang': 'Hà Giang', 'Bến Tre': 'Bến Tre', 
+        'Long An': 'Long An', 'Nam Định': 'Nam Định', 'Sơn La': 'Sơn La', 'Quảng Nam': 'Quảng Nam', 
+        'Hậu Giang': 'Hậu Giang', 'Điện Biên': 'Điện Biên', 'Hà Nội': 'Hà Nội'
+    }
+
+    # Fetch data from the database
+    job_post_city_counts = session.query(
+        DimPosition.city,
+        func.count(DimPosition.city).label('count')
+    ).join(FactJobPost, FactJobPost.position_id == DimPosition.position_id) \
+    .group_by(DimPosition.city) \
+    .order_by(func.count(DimPosition.city).desc()) \
+    .all()
+
+    # Create a DataFrame from the query results
+    job_post_city_df = pd.DataFrame(list(job_post_city_counts), columns=['city', 'count'])
+
+    # Create a dictionary for quick lookups
+    job_post_city = {city[0]: city[1] for city in job_post_city_counts}
+
+    # Load the GeoJSON data
+    with open('./visual_datn/vn-projected.json', 'r', encoding='utf-8') as f:
+        geo = json.load(f)
+
+    # Process the GeoJSON data
+    for feature in geo['features']:
+        name = feature['properties']['ten_tinh']
+        if name in correction:
+            feature['properties']['ten_tinh'] = correction[name]
+            name = correction[name]
+        
+        feature['properties']['job_post_city'] = job_post_city.get(name, 0)
+        del feature['properties']['gid']
+        del feature['properties']['code']
+
+    features = geo.get('features', [])
+
+    # Define the thresholds and corresponding colors
+    thresholds = [100, 500, 1000, 2000, 4000]
+    colors = ['#d4eeff', '#89c2d9', '#4682b4', '#2b6cb0', '#0f4c81', '#08306b']  # Example colors
+
+    for feature in features:
+        density = feature['properties'].get('job_post_city', 0)
+        color = get_color(density, thresholds, colors)
+        feature['properties']['fill'] = color
+
+    svg_file = 'vn-color.svg'
+    dwg = svgwrite.Drawing(svg_file, profile='tiny', size=(800, 800))
+
+    # Function to draw polygons and multipolygons
+    def draw_polygon(polygon, fill_color):
+        points = scale_coordinates(polygon[0])  # Assuming exterior ring only
+        dwg.add(dwg.polygon(points, fill=fill_color))
+
+    def draw_multipolygon(multipolygon, fill_color):
+        for polygon in multipolygon:
+            points = scale_coordinates(polygon[0])  # Assuming exterior ring only
+            dwg.add(dwg.polygon(points, fill=fill_color))
+
+    # Draw the features with their assigned colors
+    for feature in features:
+        properties = feature['properties']
+        coordinates = feature['geometry']['coordinates']
+        fill_color = properties.get('fill', '#000000')
+
+        if feature['geometry']['type'] == 'Polygon':
+            draw_polygon(coordinates, fill_color)
+        elif feature['geometry']['type'] == 'MultiPolygon':
+            draw_multipolygon(coordinates, fill_color)
+
+    # Save the SVG file
+    dwg.save()
+
+    app = Dash(__name__)
+
+    # Read and encode the SVG file
+    svg_base64 = read_svg(svg_file)
+
+    # Define the app layout
+    app.layout = html.Div([
+        html.H1("Vietnam Provincial Map (SVG)"),
+        html.Img(src=svg_base64, style={'width': '100%', 'height': 'auto'})
     ])
 
     return app

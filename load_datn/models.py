@@ -28,7 +28,7 @@ Base = declarative_base()
 class DimCompany(Base):
     __tablename__ = 'dim_company'
     company_id = Column(BigInteger, primary_key=True, autoincrement=True, comment='company dimension table')
-    size = Column(String(100), comment='number of employees')
+    size = Column(String(100))
     name = Column(String(100))
     inserted_date = Column(Date, default=datetime.now().date())
 
@@ -70,15 +70,12 @@ class DimJobRole(Base):
 class DimPosition(Base):
     __tablename__ = 'dim_position'
     position_id = Column(BigInteger, primary_key=True, autoincrement=True, comment='sub dimension table')
-    company_id = Column(BigInteger, ForeignKey('dim_company.company_id'), nullable=False)
     city = Column(String(100))
     detail_position = Column(String(255))
     inserted_date = Column(Date, default=datetime.now().date())
     region = Column(String(20))
-    company = relationship('DimCompany')
 
-    def __init__(self, company_id, city, detail_position, region, inserted_date=None):
-        self.company_id = company_id
+    def __init__(self, city, detail_position, region, inserted_date=None):
         self.city = city
         self.detail_position = detail_position
         self.region = region
@@ -132,6 +129,7 @@ class FactJobPost(Base):
     end_recruit_date_id = Column(BigInteger, ForeignKey('dim_date.date_id'), nullable=True)
     job_role_id = Column(BigInteger, ForeignKey('dim_job_role.job_role_id'), nullable=False)
     source_id = Column(BigInteger, ForeignKey('dim_source.source_id'), nullable=False)
+    position_id = Column(BigInteger, ForeignKey('dim_position.position_id'), nullable=False)
     salary_max = Column(BigInteger)
     salary_min = Column(BigInteger)
     years_of_experience = Column(Integer)
@@ -143,8 +141,9 @@ class FactJobPost(Base):
     end_recruit_date = relationship('DimDate', foreign_keys=[end_recruit_date_id])
     job_role = relationship('DimJobRole')
     source = relationship('DimSource')
+    position = relationship('DimPosition')
 
-    def __init__(self, company_id, start_recruit_date_id, end_recruit_date_id, job_role_id, source_id, salary_max=None, salary_min=None, years_of_experience=None, job_level=None, job_type=None, inserted_date=None):
+    def __init__(self, company_id, start_recruit_date_id, end_recruit_date_id, job_role_id, source_id, position_id, salary_max=None, salary_min=None, years_of_experience=None, job_level=None, job_type=None, inserted_date=None):
         self.company_id = company_id
         self.start_recruit_date_id = start_recruit_date_id
         self.end_recruit_date_id = end_recruit_date_id
@@ -156,6 +155,7 @@ class FactJobPost(Base):
         self.job_level = job_level
         self.job_type = job_type
         self.inserted_date = inserted_date
+        self.position_id = position_id
 
 def create_database_if_not_exists(dbname, user, password, host='localhost', port=5432):
     conn = connect(dbname='postgres', user=user, password=password, host=host, port=port)
