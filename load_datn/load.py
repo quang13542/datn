@@ -6,6 +6,7 @@ import ast
 import os
 from tqdm import tqdm
 from geoapivietnam import Correct
+import re
 
 from load_datn.models import (
     DimCompany,
@@ -44,6 +45,37 @@ def get_first_element(value):
         pass
     return value
 
+def convert_size_to_range(size):
+    if type(size)!=str:
+        size = str(size)
+    size = size.replace('.', '').replace(' nhân viên', '')
+    if 'Dưới' in size or 'nhân viên' in size:
+        numbers = re.findall(r'\d+', size)
+        if numbers:
+            return '00000-' + numbers[0].zfill(5)
+        else:
+            return '00000-00001'  # Assign a default small range if no number found
+    elif 'Hơn' in size:
+        numbers = re.findall(r'\d+', size)
+        if numbers:
+            return numbers[0].zfill(5) + '+'
+        else:
+            return '99999+'  # Assign a default large value if no number found
+    elif '+' in size:
+        numbers = re.findall(r'\d+', size)
+        if numbers:
+            return numbers[0].zfill(5) + '+'
+        else:
+            return '99999+'  # Assign a default large value if no number found
+    else:
+        ranges = re.findall(r'\d+', size)
+        if len(ranges) == 2:
+            return ranges[0].zfill(5) + '-' + ranges[1].zfill(5)
+        elif len(ranges) == 1:
+            return ranges[0].zfill(5) + '+'
+        else:
+            return '00000-00000'
+
 def upsert_data():
     folder_path = "./load_datn/combined_source"
     all_items = os.listdir(folder_path)
@@ -56,7 +88,9 @@ def upsert_data():
         greatest_name = max(files)
     
     df = pd.read_csv(f'{folder_path}/{greatest_name}', header=0)
-    
+
+    df['company_size'] = df['company_size'].map(convert_size_to_range)
+
     # upsert_company
     company_list = df[['company_name']].value_counts().index.values.tolist()
     company_list = [' '.join(company).lower() for company in company_list]

@@ -15,6 +15,7 @@ import matplotlib.colors as mcolors
 import svgwrite
 from svgwrite import cm, mm
 import numpy as np
+from scipy import stats
 
 from load_datn.models import (
     DimSource,
@@ -30,26 +31,26 @@ colors = pcolors.qualitative.Plotly
 
 def test():
     correction = {'Cần Thơn': 'Cần Thơ', 'An Giang': 'An Giang', 'Bắc Ninh': 'Bắc Ninh', 'Lạng Sơn': 'Lạng Sơn', 'Khánh Hòa': 'Khánh Hòa', 'Phú Yên': 'Phú Yên', 'Hà Tĩnh': 'Hà Tĩnh', 'Bình Dương': 'Bình Dương', 'Phú Thọ': 'Phú Thọ', 'Vĩnh Long': 'Vĩnh Long', 'Đồng Nai': 'Đồng Nai', 'Hải Dương': 'Hải Dương', 'Tuyên Quang': 'Tuyên Quang', 'Tây Ninh': 'Tây Ninh', 'Gia Lai': 'Gia Lai', 'Yên Bái': 'Yên Bái', 'Đà Nẵng': 'Đà Nẵng', 'Thái Bình': 'Thái Bình', 'Thừa Thiên Huế': 'Thừa Thiên Huế', 'Hưng Yên': 'Hưng Yên', 'Đồng Tháp': 'Đồng Tháp', 'TP. Hồ Chí Minh': 'Hồ Chí Minh', 'Bình Định': 'Bình Định', 'Lào Cai': 'Lào Cai', 'Quảng Ngãi': 'Quảng Ngãi', 'Sóc Trăng': 'Sóc Trăng', 'Nghệ An': 'Nghệ An', 'Bình Thuận': 'Bình Thuận', 'Thái Nguyên': 'Thái Nguyên', 'Bắc Kạn': 'Bắc Kạn', 'Kien Giang': 'Kiên Giang', 'Kon Tum': 'Kon Tum', 'Bình Phước': 'Bình Phước', 'Đăk Nông': 'Đắk Nông', 'Bạc Liêu': 'Bạc Liêu', 'Quản Bình': 'Quảng Bình', 'Hà Nam': 'Hà Nam', 'Trà Vinh': 'Trà Vinh', 'Quảng Ninh': 'Quảng Ninh', 'Cà Mau': 'Cà Mau', 'Tiền Giang': 'Tiền Giang', 'Đăk Lăk': 'Đắk Lắk', 'Cao Bằng': 'Cao Bằng', 'Hải Phòng': 'Hải Phòng', 'Bắc Giang': 'Bắc Giang', 'Quảng Trị': 'Quảng Trị', 'Hòa Bình': 'Hòa Bình', 'Lâm Đồng': 'Lâm Đồng', 'Lai Châu': 'Lai Châu', 'Thanh Hóa': 'Thanh Hóa', 'Bà Rịa -Vũng Tàu': 'Bà Rịa - Vũng Tàu', 'Ninh Bình': 'Ninh Bình', 'Ninh Thuận': 'Ninh Thuận', 'Vĩnh Phúc': 'Vĩnh Phúc', 'Hà Giang': 'Hà Giang', 'Bến Tre': 'Bến Tre', 'Long An': 'Long An', 'Nam Định': 'Nam Định', 'Sơn La': 'Sơn La', 'Quảng Nam': 'Quảng Nam', 'Hậu Giang': 'Hậu Giang', 'Điện Biên': 'Điện Biên', 'Hà Nội': 'Hà Nội'}
-    # job_post_region_counts = session.query(
-    #     DimPosition.region,
-    #     func.count(DimPosition.region).label('count')
-    # ).join(FactJobPost, FactJobPost.position_id == DimPosition.position_id) \
-    # .group_by(DimPosition.region) \
-    # .order_by(func.count(DimPosition.region).desc()) \
-    # .all()
-    # job_post_region = {}
-    # for region in job_post_region_counts:
-    #     job_post_region[region[0]] = region[1]
-    # # print(job_post_region_counts)
-    # job_post_city_counts = session.query(
-    #     DimPosition.city,
-    #     func.count(DimPosition.city).label('count')
-    # ).join(FactJobPost, FactJobPost.position_id == DimPosition.position_id) \
-    # .group_by(DimPosition.city) \
-    # .order_by(func.count(DimPosition.city).desc()) \
-    # .all()
-    # job_post_city_df = pd.DataFrame(list(job_post_city_counts), columns=['city', 'count'])
-    # # print(job_post_city_counts)
+    job_post_region_counts = session.query(
+        DimPosition.region,
+        func.count(DimPosition.region).label('count')
+    ).join(FactJobPost, FactJobPost.position_id == DimPosition.position_id) \
+    .group_by(DimPosition.region) \
+    .order_by(func.count(DimPosition.region).desc()) \
+    .all()
+    job_post_region = {}
+    for region in job_post_region_counts:
+        job_post_region[region[0]] = region[1]
+    # print(job_post_region_counts)
+    job_post_city_counts = session.query(
+        DimPosition.city,
+        func.count(DimPosition.city).label('count')
+    ).join(FactJobPost, FactJobPost.position_id == DimPosition.position_id) \
+    .group_by(DimPosition.city) \
+    .order_by(func.count(DimPosition.city).desc()) \
+    .all()
+    job_post_city_df = pd.DataFrame(list(job_post_city_counts), columns=['city', 'count'])
+    print(job_post_city_counts)
     # job_post_city = {}
     # for city in job_post_city_counts:
     #     job_post_city[city[0]] = city[1]
@@ -110,6 +111,17 @@ def visual_yoe():
 
     source_list = [source.name for source in results]
     df = pd.DataFrame(visual_data, columns=['level', 'source', 'yoe'])
+
+
+    df['z_score'] = stats.zscore(df['yoe'])
+    # Define threshold (commonly set to 3)
+    threshold = 3
+    # Filter out outliers
+    df = df[(df['z_score'].abs() <= threshold)]
+    # Drop the 'z_score' column as it's no longer needed
+    df = df.drop(columns=['z_score'])
+
+
     level_list = df['level'].unique()
 
     app.layout = html.Div([
@@ -194,6 +206,21 @@ def visual_salary_analysis():
 
     source_list = [source.name for source in results]
     df = pd.DataFrame(visual_data, columns=['level', 'source', 'salary_min', 'salary_max'])
+
+
+
+
+    df['z_score'] = stats.zscore(df['salary_max'])
+    # Define threshold (commonly set to 3)
+    threshold = 3
+    # Filter out outliers
+    df = df[(df['z_score'].abs() <= threshold)]
+    # Drop the 'z_score' column as it's no longer needed
+    df = df.drop(columns=['z_score'])
+
+
+
+
     level_list = df['level'].unique()
 
     app.layout = html.Div([
@@ -427,5 +454,88 @@ def visual_map():
         html.H1("Vietnam Provincial Map (SVG)"),
         html.Img(src=svg_base64, style={'width': '100%', 'height': 'auto'})
     ])
+
+    return app
+
+def visual_salary_distribution():
+    app = Dash(__name__)
+
+    # Query the data
+    visual_data = session.query(
+        FactJobPost.job_level,
+        DimSource.name,
+        FactJobPost.salary_min,
+        FactJobPost.salary_max
+    ).join(DimSource).filter(FactJobPost.salary_max != 0)
+
+    query = session.query(DimSource)
+    results = query.all()
+
+    source_list = [source.name for source in results]
+    df = pd.DataFrame(visual_data, columns=['level', 'source', 'salary_min', 'salary_max'])
+
+    # Remove outliers using Z-score method
+    df['z_score'] = stats.zscore(df['salary_max'])
+    threshold = 3
+    df = df[(df['z_score'].abs() <= threshold)]
+    df = df.drop(columns=['z_score'])
+
+    level_list = df['level'].unique()
+
+    app.layout = html.Div([
+        html.H4("Salary Analysis"),
+        html.P("Job Level:"),
+        dcc.Checklist(
+            id='job-level', 
+            options=[{'label': l, 'value': l} for l in level_list],
+            value=[level_list[0]], 
+            inline=True
+        ),
+        html.P("Source:"),
+        dcc.Checklist(
+            id='source', 
+            options=[{'label': s, 'value': s} for s in source_list],
+            value=[source_list[0]], 
+            inline=True
+        ),
+        dcc.Graph(id="graph"),
+    ])
+
+    @app.callback(
+        Output("graph", "figure"), 
+        [Input("job-level", "value"), 
+        Input("source", "value")]
+    )
+    def generate_chart(selected_job_level, selected_source):
+        filtered_data = df[
+            (df['level'].isin(selected_job_level)) & 
+            (df['source'].isin(selected_source))
+        ]
+
+        # Create swarm plot using scatter plot with jitter
+        fig = go.Figure()
+
+        for level in filtered_data['level'].unique():
+            level_data = filtered_data[filtered_data['level'] == level]
+            
+            # Adding jitter to the x-values
+            jittered_x = level_data['source'] + np.random.uniform(-0.1, 0.1, size=len(level_data))
+
+            fig.add_trace(go.Scatter(
+                x=jittered_x,
+                y=level_data['salary_max'],
+                mode='markers',
+                name=level,
+                marker=dict(size=10, line=dict(width=1), opacity=0.8)
+            ))
+
+        fig.update_layout(
+            title='Salary Distribution by Job Level and Source',
+            xaxis_title='Source',
+            yaxis_title='Salary Max',
+            showlegend=True
+        )
+
+        return fig
 
     return app

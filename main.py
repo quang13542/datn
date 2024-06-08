@@ -10,6 +10,11 @@ from visual_datn.Descriptive import (
     visual_salary_analysis,
     visual_word_cloud,
     visual_map,
+    visual_salary_distribution,
+)
+from visual_datn.Diagnostic import (
+    visual_exp_salary,
+    visual_com_size_salary
 )
 
 sys.path.append(os.getcwd())
