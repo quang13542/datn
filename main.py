@@ -19,7 +19,7 @@ from visual_datn.Diagnostic import (
 
 from visual_datn.Predictive import (
     visual_skill_demand,
-    visual_job_role_popularity,
+    # visual_job_role_popularity,
     visual_skill_demand_forecast
 )
 
@@ -40,6 +40,10 @@ from transform_datn.final_transform import (
     transform_TopCV,
     transform_ITViec,
     transform_TopDev
+)
+from visual_datn.Prescriptive import (
+    visual_critical_skills,
+    visual_job_roles_by_skill
 )
 
 sys.path.append(os.getcwd())

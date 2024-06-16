@@ -83,53 +83,53 @@ def visual_skill_demand():
 
     return app
 
-def visual_job_role_popularity():
-    app = Dash(__name__)
+# def visual_job_role_popularity():
+#     app = Dash(__name__)
 
-    visual_data = session.query(
-        DimJobRole.name.label('job_role'),
-        DimDate.year,
-        DimDate.month,
-        func.count(FactJobPost.job_post_id).label('count')
-    ).join(DimJobRole, FactJobPost.job_role_id == DimJobRole.job_role_id)\
-    .join(DimDate, FactJobPost.start_recruit_date_id == DimDate.date_id)\
-    .group_by(DimJobRole.name, DimDate.year, DimDate.month).all()
+#     visual_data = session.query(
+#         DimJobRole.name.label('job_role'),
+#         DimDate.year,
+#         DimDate.month,
+#         func.count(FactJobPost.job_post_id).label('count')
+#     ).join(DimJobRole, FactJobPost.job_role_id == DimJobRole.job_role_id)\
+#     .join(DimDate, FactJobPost.start_recruit_date_id == DimDate.date_id)\
+#     .group_by(DimJobRole.name, DimDate.year, DimDate.month).all()
 
-    df = pd.DataFrame(visual_data, columns=['job_role', 'year', 'month', 'count'])
-    df['date'] = pd.to_datetime(df[['year', 'month']].assign(day=1))
+#     df = pd.DataFrame(visual_data, columns=['job_role', 'year', 'month', 'count'])
+#     df['date'] = pd.to_datetime(df[['year', 'month']].assign(day=1))
 
-    job_roles = df['job_role'].unique()
+#     job_roles = df['job_role'].unique()
 
-    app.layout = html.Div([
-        html.H4("Job Role Popularity Over Time"),
-        dcc.Checklist(
-            id='job-roles', 
-            options=[{'label': role, 'value': role} for role in job_roles],
-            value=[job_roles[0]], 
-            inline=True
-        ),
-        dcc.Graph(id="graph"),
-    ])
+#     app.layout = html.Div([
+#         html.H4("Job Role Popularity Over Time"),
+#         dcc.Checklist(
+#             id='job-roles', 
+#             options=[{'label': role, 'value': role} for role in job_roles],
+#             value=[job_roles[0]], 
+#             inline=True
+#         ),
+#         dcc.Graph(id="graph"),
+#     ])
 
-    @app.callback(
-        Output("graph", "figure"),
-        [Input("job-roles", "value")]
-    )
-    def generate_chart(selected_roles):
-        filtered_data = df[df['job_role'].isin(selected_roles)]
+#     @app.callback(
+#         Output("graph", "figure"),
+#         [Input("job-roles", "value")]
+#     )
+#     def generate_chart(selected_roles):
+#         filtered_data = df[df['job_role'].isin(selected_roles)]
 
-        fig = px.line(filtered_data, x='date', y='count', color='job_role')
+#         fig = px.line(filtered_data, x='date', y='count', color='job_role')
 
-        fig.update_layout(
-            title='Job Role Popularity Over Time',
-            xaxis_title='Date',
-            yaxis_title='Number of Job Postings',
-            showlegend=True
-        )
+#         fig.update_layout(
+#             title='Job Role Popularity Over Time',
+#             xaxis_title='Date',
+#             yaxis_title='Number of Job Postings',
+#             showlegend=True
+#         )
 
-        return fig
+#         return fig
 
-    return app
+#     return app
 
 def visual_skill_demand_forecast():
     app = Dash(__name__)
