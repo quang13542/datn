@@ -101,6 +101,15 @@ def visual_exp_salary():
     return app
 
 
+def parse_company_size(size):
+    if '+' in size:
+        lower_bound = int(size.replace('+', ''))
+        upper_bound = float('inf')  # Represents no upper limit
+    else:
+        bounds = size.split('-')
+        lower_bound = int(bounds[0])
+        upper_bound = int(bounds[1])
+    return lower_bound, upper_bound
 
 def visual_com_size_salary():
     app = Dash(__name__)
@@ -109,36 +118,58 @@ def visual_com_size_salary():
     average_salary_by_size = session.query(
         DimCompany.size,
         func.avg(FactJobPost.salary_max).label('avg_salary_max'),
-        func.avg(FactJobPost.salary_min).label('avg_salary_min')
-    ).join(FactJobPost, DimCompany.company_id == FactJobPost.company_id) \
+        func.avg(FactJobPost.salary_min).label('avg_salary_min'),
+        func.avg(FactJobPost.years_of_experience).label('avg_yoe'),
+    ).filter(FactJobPost.salary_max != 0) \
+    .filter(FactJobPost.years_of_experience != -1) \
+    .join(FactJobPost, DimCompany.company_id == FactJobPost.company_id) \
     .group_by(DimCompany.size) \
     .all()
 
     # Convert the query results into a DataFrame
-    df_avg_salary = pd.DataFrame(average_salary_by_size, columns=['company_size', 'avg_salary_max', 'avg_salary_min'])
-    df_avg_salary = df_avg_salary.sort_values(by='company_size')
+    df_avg_salary = pd.DataFrame(average_salary_by_size, columns=['company_size', 'avg_salary_max', 'avg_salary_min', 'avg_yoe'])
+    df_avg_salary = df_avg_salary.astype({'company_size': str, 'avg_salary_max': float, 'avg_salary_min': float, 'avg_yoe': float})
+    df_avg_salary['parsed_size'] = df_avg_salary['company_size'].apply(parse_company_size)
 
-    print(df_avg_salary)
+    # Sort DataFrame based on the parsed size lower bound
+    df_avg_salary = df_avg_salary.sort_values(by='parsed_size', key=lambda x: [b[0] for b in x]).reset_index(drop=True)
+
+    print(df_avg_salary.dtypes)
 
     app.layout = html.Div([
         html.H4("Average Salary by Company Size"),
-        dcc.Graph(id="salary-graph"),
+        dcc.Graph(id="salary-bar-graph"),
+        dcc.Graph(id="salary-line-graph"),
     ])
 
     @app.callback(
-        Output("salary-graph", "figure"), 
-        [Input("salary-graph", "id")]
+        Output("salary-bar-graph", "figure"), 
+        [Input("salary-bar-graph", "id")]
     )
-    def update_graph(_):
-        fig = px.bar(df_avg_salary, x='company_size', y=['avg_salary_max', 'avg_salary_min'], barmode='group')
+    def update_yoe_graph(_):
+        fig = px.line(df_avg_salary, x='company_size', y='avg_yoe')
 
         fig.update_layout(
-            title='Average Salary by Company Size',
+            title='Average years of experience by Company Size',
+            xaxis_title='Company Size',
+            yaxis_title='Average years of experience',
+            showlegend=True
+        )
+        return fig
+
+    @app.callback(
+        Output("salary-line-graph", "figure"),
+        [Input("salary-line-graph", "id")]
+    )
+    def update_salary_graph(_):
+        fig = px.line(df_avg_salary, x='company_size', y=['avg_salary_max', 'avg_salary_min'])
+
+        fig.update_layout(
+            title='Average Salary Trend by Company Size',
             xaxis_title='Company Size',
             yaxis_title='Average Salary',
             showlegend=True
         )
-
         return fig
 
     return app

@@ -123,9 +123,16 @@ def upsert_data():
     for company in results:
         company_dict[company.name] = company.company_id
     print(f"insert {insert_count} company")
-
+    count=0
+    total=0
+    for x in df['company_name'].to_list():
+        total+=1
+        if type(x) is float:
+            count+=1
+    
+    print(count)
     df['company_id'] = df['company_name'].map(lambda x: company_dict[x.lower()])
-
+    return
     # upsert source
     source_list = df[['source']].value_counts().index.values.tolist()
     source_list = [' '.join(source).lower() for source in source_list]
@@ -507,7 +514,7 @@ def upsert_data():
 
 
 def combine_data():
-    df1 = pd.read_csv('./transform_datn/transformed_ITjobs.csv')
+    df1 = pd.read_csv('./transform_datn/transformed_ITjobs_ver2.csv')
     df2 = pd.read_csv('./transform_datn/transformed_ITViec.csv')
     df3 = pd.read_csv('./transform_datn/transformed_TopCV.csv')
     df4 = pd.read_csv('./transform_datn/transformed_TopDev.csv')

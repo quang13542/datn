@@ -9,49 +9,56 @@ import pickle
 import time
 from datetime import datetime
 import json
+from tqdm import tqdm
 
-with open("./crawler_datn/TopCV_list_url", "rb") as fp:
-    url_list = pickle.load(fp)
+def crawl_TopCV_post():
+    with open("./crawler_datn/TopCV_list_url", "rb") as fp:
+        url_list = pickle.load(fp)
 
-with open("./crawler_datn/TopCv.json", "r", encoding="utf-8") as json_file:
-    json_data = json.load(json_file)
-
-crawled_url_list = json_data.keys()
-
-url_list = [url for url in url_list if url not in crawled_url_list]
-
-print(len(url_list))
-
-count=0
-for url in url_list:
     try:
-        count+=1
-        print(count)
-        driver = webdriver.Chrome()
-
-        driver.get(url)
-        time.sleep(1)
-        content = driver.find_element(By.CLASS_NAME, 'job-detail__body')
-        text = content.text
-
-        text= '\n'.join(line for line in text.split('\n') if line.strip())
-
-        start_index = text.find('Phân tích mức độ phù hợp của bạn với công việc')
-
-        if start_index != -1:
-            cleaned_text = text[:start_index]
-        else:
-            cleaned_text = text
-
-        driver.quit()
-        metadata = {"source": "TopCv", "created_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
-
-        json_data[url] = {"text": cleaned_text, "metadata": metadata}
+        with open("./crawler_datn/TopCv_ver02.json", "r", encoding="utf-8") as json_file:
+            json_data = json.load(json_file)
     except:
-        print(url)
-        continue
+        json_data = {}
 
-json_file_path = "./crawler_datn/TopCv.json"
+    crawled_url_list = json_data.keys()
 
-with open(json_file_path, "w", encoding="utf-8") as json_file:
-    json.dump(json_data, json_file, ensure_ascii=False, indent=4)
+    url_list = [url for url in url_list if url not in crawled_url_list]
+
+    print(len(url_list))
+    json_file_path = "./crawler_datn/TopCv_ver02.json"
+    count=0
+    for url in tqdm(url_list):
+        try:
+            count+=1
+            print(count)
+            driver = webdriver.Chrome()
+
+            driver.get(url)
+            time.sleep(1)
+            content = driver.find_element(By.CLASS_NAME, 'job-detail__body')
+            text = content.text
+
+            text= '\n'.join(line for line in text.split('\n') if line.strip())
+
+            # start_index = text.find('Phân tích mức độ phù hợp của bạn với công việc')
+
+            # if start_index != -1:
+            #     cleaned_text = text[:start_index]
+            # else:
+            #     cleaned_text = text
+
+            driver.quit()
+            metadata = {"source": "TopCv", "created_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+
+            json_data[url] = {"text": text, "metadata": metadata}
+        except:
+            print(url)
+            continue
+
+        if count % 100 == 0:
+            with open(json_file_path, "w", encoding="utf-8") as json_file:
+                json.dump(json_data, json_file, ensure_ascii=False, indent=4)
+
+    with open(json_file_path, "w", encoding="utf-8") as json_file:
+        json.dump(json_data, json_file, ensure_ascii=False, indent=4)

@@ -5,39 +5,50 @@ import time
 from selenium.webdriver.common.by import By
 from datetime import datetime
 import json
+from tqdm import tqdm
 
-with open("./crawler_datn/ITjobs_list_url", "rb") as fp:
-    url_list = pickle.load(fp)
+def crawl_ITjobs_post():
+    json_file_path = "./crawler_datn/ITjobs.json"
+    existing_list = []
+    with open(json_file_path, "r", encoding="utf-8") as json_file:
+        data = json.load(json_file)
+        print(type(data))
+    existing_list = data.keys()
 
-json_data = {}
+    with open("./crawler_datn/ITjobs_list_url_ver2", "rb") as fp:
+        url_list = pickle.load(fp)
+    url_list = [i for i in url_list if i not in existing_list]
+    print(len(url_list))
 
-count = 0
+    json_data = {}
 
-for url in url_list:
-    try:
-        count += 1
-        print(count, len(url_list))
-        driver = webdriver.Chrome()
-        driver.get(url)
-        time.sleep(1)
+    count = 0
 
-        content = driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div[1]/div')
-        text = content.text
+    for url in tqdm(url_list):
+        try:
+            # count += 1
+            # print(count, len(url_list))
+            driver = webdriver.Chrome()
+            driver.get(url)
+            time.sleep(1)
 
-        cleaned_text = '\n'.join(line for line in text.split('\n') if line.strip())
+            content = driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div[1]/div')
+            text = content.text
 
-        driver.quit()
+            cleaned_text = '\n'.join(line for line in text.split('\n') if line.strip())
 
-        metadata = {"source": "ITjobs", "created_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+            driver.quit()
 
-        json_data[url] = {"text": cleaned_text, "metadata": metadata}
+            metadata = {"source": "ITjobs", "created_date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
-        
-    except:
-        print(url)
-        continue
+            json_data[url] = {"text": cleaned_text, "metadata": metadata}
 
-json_file_path = "./crawler_datn/ITjobs.json"
+            
+        except:
+            print(url)
+            continue
 
-with open(json_file_path, "w", encoding="utf-8") as json_file:
-    json.dump(json_data, json_file, ensure_ascii=False, indent=4)
+    
+
+    with open("./crawler_datn/ITjobs_ver2.json", "w", encoding="utf-8") as json_file:
+        json.dump(json_data, json_file, ensure_ascii=False, indent=4)
