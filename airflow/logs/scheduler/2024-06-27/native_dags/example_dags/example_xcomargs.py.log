@@ -1,0 +1,48 @@
+[2024-06-27T10:12:12.702+0700] {processor.py:157} INFO - Started process (PID=17566) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:12:12.703+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2024-06-27T10:12:12.705+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.704+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:12:12.722+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom_args_with_operators', 'example_xcom_args']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:12:12.818+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.818+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_xcom_args_with_operators
+[2024-06-27T10:12:12.828+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.827+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_xcom_args_with_operators
+[2024-06-27T10:12:12.835+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.834+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_xcom_args_with_operators
+[2024-06-27T10:12:12.858+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.858+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_xcom_args
+[2024-06-27T10:12:12.865+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.864+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_xcom_args
+[2024-06-27T10:12:12.871+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.871+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_xcom_args
+[2024-06-27T10:12:12.876+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.876+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:12:12.885+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.885+0700] {dag.py:2763} INFO - Creating ORM DAG for example_xcom_args_with_operators
+[2024-06-27T10:12:12.886+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.886+0700] {dag.py:2763} INFO - Creating ORM DAG for example_xcom_args
+[2024-06-27T10:12:12.895+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.895+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2024-06-27T10:12:12.896+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:12.896+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2024-06-27T10:12:12.914+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py took 0.217 seconds
+[2024-06-27T10:32:56.623+0700] {processor.py:157} INFO - Started process (PID=21173) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:32:56.627+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2024-06-27T10:32:56.629+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:32:56.628+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:32:56.639+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom_args', 'example_xcom_args_with_operators']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:32:56.663+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:32:56.662+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:32:56.680+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:32:56.680+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2024-06-27T10:32:56.683+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:32:56.683+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2024-06-27T10:32:56.709+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py took 0.089 seconds
+[2024-06-27T10:42:11.955+0700] {processor.py:157} INFO - Started process (PID=23167) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:42:11.960+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2024-06-27T10:42:11.962+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:11.961+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:42:11.979+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom_args_with_operators', 'example_xcom_args']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:42:12.004+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:12.004+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:42:12.022+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:12.022+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2024-06-27T10:42:12.025+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:12.024+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2024-06-27T10:42:12.046+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py took 0.096 seconds
+[2024-06-27T10:43:03.987+0700] {processor.py:157} INFO - Started process (PID=23388) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:43:03.992+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2024-06-27T10:43:03.993+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:03.992+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:43:04.008+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom_args', 'example_xcom_args_with_operators']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:43:04.031+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:04.031+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:43:04.049+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:04.049+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2024-06-27T10:43:04.052+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:04.052+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2024-06-27T10:43:04.071+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py took 0.090 seconds
+[2024-06-27T10:43:48.755+0700] {processor.py:157} INFO - Started process (PID=23558) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:43:48.760+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py for tasks to queue
+[2024-06-27T10:43:48.763+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:48.762+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:43:48.777+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom_args_with_operators', 'example_xcom_args']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py
+[2024-06-27T10:43:48.806+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:48.805+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:43:48.834+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:48.834+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args to None, run_after=None
+[2024-06-27T10:43:48.840+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:48.840+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom_args_with_operators to None, run_after=None
+[2024-06-27T10:43:48.869+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcomargs.py took 0.118 seconds

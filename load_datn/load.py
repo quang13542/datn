@@ -132,7 +132,6 @@ def upsert_data():
     
     print(count)
     df['company_id'] = df['company_name'].map(lambda x: company_dict[x.lower()])
-    return
     # upsert source
     source_list = df[['source']].value_counts().index.values.tolist()
     source_list = [' '.join(source).lower() for source in source_list]

@@ -1,0 +1,25 @@
+[2024-06-27T10:42:27.273+0700] {processor.py:157} INFO - Started process (PID=23247) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:42:27.275+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2024-06-27T10:42:27.276+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:27.275+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:42:27.289+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_task_group']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:42:27.402+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:27.402+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_task_group
+[2024-06-27T10:42:27.413+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:27.413+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_task_group
+[2024-06-27T10:42:27.420+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:27.420+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_task_group
+[2024-06-27T10:42:27.430+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:27.430+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:27.439+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:27.439+0700] {dag.py:2763} INFO - Creating ORM DAG for example_task_group
+[2024-06-27T10:42:27.447+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:27.447+0700] {dag.py:3504} INFO - Setting next_dagrun for example_task_group to 2024-06-26T03:42:27.447412+00:00, run_after=2024-06-27T03:42:27.447412+00:00
+[2024-06-27T10:42:27.465+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py took 0.197 seconds
+[2024-06-27T10:43:19.392+0700] {processor.py:157} INFO - Started process (PID=23459) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:43:19.397+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2024-06-27T10:43:19.398+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:19.398+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:43:19.409+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_task_group']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:43:19.425+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:19.424+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:19.443+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:19.443+0700] {dag.py:3504} INFO - Setting next_dagrun for example_task_group to 2024-06-26T03:43:19.442838+00:00, run_after=2024-06-27T03:43:19.442838+00:00
+[2024-06-27T10:43:19.462+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py took 0.074 seconds
+[2024-06-27T10:44:10.561+0700] {processor.py:157} INFO - Started process (PID=23645) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:44:10.566+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py for tasks to queue
+[2024-06-27T10:44:10.568+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:10.567+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:44:10.581+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_task_group']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py
+[2024-06-27T10:44:10.608+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:10.608+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:44:10.628+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:10.627+0700] {dag.py:3504} INFO - Setting next_dagrun for example_task_group to 2024-06-26T03:44:10.627708+00:00, run_after=2024-06-27T03:44:10.627708+00:00
+[2024-06-27T10:44:10.661+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_task_group.py took 0.104 seconds

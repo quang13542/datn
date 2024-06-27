@@ -1,0 +1,32 @@
+[2024-06-27T10:12:18.063+0700] {processor.py:157} INFO - Started process (PID=17614) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:12:18.063+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2024-06-27T10:12:18.064+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:18.064+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:12:18.073+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:12:18.176+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:18.176+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_trigger_target_dag
+[2024-06-27T10:12:18.186+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:18.186+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_trigger_target_dag
+[2024-06-27T10:12:18.193+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:18.193+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_trigger_target_dag
+[2024-06-27T10:12:18.203+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:18.203+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:12:18.212+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:18.211+0700] {dag.py:2763} INFO - Creating ORM DAG for example_trigger_target_dag
+[2024-06-27T10:12:18.221+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:18.220+0700] {dag.py:3504} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2024-06-27T10:12:18.238+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.177 seconds
+[2024-06-27T10:42:17.115+0700] {processor.py:157} INFO - Started process (PID=23211) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:42:17.120+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2024-06-27T10:42:17.122+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:17.121+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:42:17.134+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:42:17.157+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:17.156+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:17.174+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:17.174+0700] {dag.py:3504} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2024-06-27T10:42:17.198+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.088 seconds
+[2024-06-27T10:43:09.141+0700] {processor.py:157} INFO - Started process (PID=23420) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:43:09.146+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2024-06-27T10:43:09.147+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:09.147+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:43:09.157+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:43:09.185+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:09.185+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:09.209+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:09.209+0700] {dag.py:3504} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2024-06-27T10:43:09.231+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.095 seconds
+[2024-06-27T10:43:53.545+0700] {processor.py:157} INFO - Started process (PID=23582) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:43:53.547+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py for tasks to queue
+[2024-06-27T10:43:53.553+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:53.549+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:43:53.563+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_trigger_target_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py
+[2024-06-27T10:43:53.584+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:53.583+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:53.608+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:53.607+0700] {dag.py:3504} INFO - Setting next_dagrun for example_trigger_target_dag to None, run_after=None
+[2024-06-27T10:43:53.662+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_trigger_target_dag.py took 0.122 seconds

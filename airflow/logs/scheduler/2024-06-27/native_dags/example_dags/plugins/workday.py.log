@@ -1,0 +1,15 @@
+[2024-06-27T10:42:19.423+0700] {processor.py:157} INFO - Started process (PID=23222) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:42:19.424+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2024-06-27T10:42:19.425+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:19.424+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:42:20.138+0700] {processor.py:838} WARNING - No viable dags retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:42:20.146+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py took 0.727 seconds
+[2024-06-27T10:43:11.495+0700] {processor.py:157} INFO - Started process (PID=23431) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:43:11.506+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2024-06-27T10:43:11.509+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:11.508+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:43:11.850+0700] {processor.py:838} WARNING - No viable dags retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:43:11.859+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py took 0.369 seconds
+[2024-06-27T10:43:55.602+0700] {processor.py:157} INFO - Started process (PID=23591) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:43:55.607+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py for tasks to queue
+[2024-06-27T10:43:55.608+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:55.607+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:43:55.961+0700] {processor.py:838} WARNING - No viable dags retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py
+[2024-06-27T10:43:55.969+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/workday.py took 0.371 seconds

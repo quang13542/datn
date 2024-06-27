@@ -1,0 +1,25 @@
+[2024-06-27T10:42:32.415+0700] {processor.py:157} INFO - Started process (PID=23274) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:42:32.417+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py for tasks to queue
+[2024-06-27T10:42:32.418+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:32.417+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:42:32.428+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_sensor_decorator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:42:32.527+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:32.527+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_sensor_decorator
+[2024-06-27T10:42:32.537+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:32.537+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_sensor_decorator
+[2024-06-27T10:42:32.544+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:32.544+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_sensor_decorator
+[2024-06-27T10:42:32.555+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:32.555+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:32.564+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:32.564+0700] {dag.py:2763} INFO - Creating ORM DAG for example_sensor_decorator
+[2024-06-27T10:42:32.572+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:32.572+0700] {dag.py:3504} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
+[2024-06-27T10:42:32.590+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.180 seconds
+[2024-06-27T10:43:24.265+0700] {processor.py:157} INFO - Started process (PID=23473) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:43:24.271+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py for tasks to queue
+[2024-06-27T10:43:24.274+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:24.273+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:43:24.296+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_sensor_decorator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:43:24.332+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:24.331+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:24.359+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:24.359+0700] {dag.py:3504} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
+[2024-06-27T10:43:24.386+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.127 seconds
+[2024-06-27T10:44:14.942+0700] {processor.py:157} INFO - Started process (PID=23663) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:44:14.947+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py for tasks to queue
+[2024-06-27T10:44:14.949+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:14.948+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:44:14.962+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_sensor_decorator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py
+[2024-06-27T10:44:14.993+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:14.993+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:44:15.015+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:15.015+0700] {dag.py:3504} INFO - Setting next_dagrun for example_sensor_decorator to None, run_after=None
+[2024-06-27T10:44:15.037+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_sensor_decorator.py took 0.102 seconds

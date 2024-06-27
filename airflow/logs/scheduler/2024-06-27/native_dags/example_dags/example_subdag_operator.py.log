@@ -1,0 +1,42 @@
+[2024-06-27T10:42:23.386+0700] {processor.py:157} INFO - Started process (PID=23235) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:42:23.387+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py for tasks to queue
+[2024-06-27T10:42:23.388+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.388+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:42:23.415+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_subdag_operator.section-1', 'example_subdag_operator.section-2', 'example_subdag_operator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:42:23.506+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.505+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_subdag_operator
+[2024-06-27T10:42:23.515+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.515+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_subdag_operator
+[2024-06-27T10:42:23.523+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.522+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_subdag_operator
+[2024-06-27T10:42:23.533+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.533+0700] {dag.py:2742} INFO - Sync 3 DAGs
+[2024-06-27T10:42:23.541+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.541+0700] {dag.py:2763} INFO - Creating ORM DAG for example_subdag_operator.section-2
+[2024-06-27T10:42:23.541+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.541+0700] {dag.py:2763} INFO - Creating ORM DAG for example_subdag_operator
+[2024-06-27T10:42:23.542+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.542+0700] {dag.py:2763} INFO - Creating ORM DAG for example_subdag_operator.section-1
+[2024-06-27T10:42:23.551+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.551+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator to 2022-01-01T00:00:00+00:00, run_after=2022-01-01T00:00:00+00:00
+[2024-06-27T10:42:23.551+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.551+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2024-06-27T10:42:23.552+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.551+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2024-06-27T10:42:23.557+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.557+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:42:23.561+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.561+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2024-06-27T10:42:23.563+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:23.563+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2024-06-27T10:42:23.578+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py took 0.194 seconds
+[2024-06-27T10:43:15.392+0700] {processor.py:157} INFO - Started process (PID=23445) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:43:15.397+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py for tasks to queue
+[2024-06-27T10:43:15.399+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.398+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:43:15.434+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_subdag_operator.section-1', 'example_subdag_operator.section-2', 'example_subdag_operator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:43:15.458+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.457+0700] {dag.py:2742} INFO - Sync 3 DAGs
+[2024-06-27T10:43:15.477+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.476+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator to 2022-01-01T00:00:00+00:00, run_after=2022-01-01T00:00:00+00:00
+[2024-06-27T10:43:15.480+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.479+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2024-06-27T10:43:15.481+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.480+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2024-06-27T10:43:15.486+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.486+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:43:15.490+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.489+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2024-06-27T10:43:15.490+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:15.490+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2024-06-27T10:43:15.506+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py took 0.119 seconds
+[2024-06-27T10:44:07.105+0700] {processor.py:157} INFO - Started process (PID=23635) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:44:07.106+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py for tasks to queue
+[2024-06-27T10:44:07.107+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.106+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:44:07.130+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_subdag_operator.section-1', 'example_subdag_operator.section-2', 'example_subdag_operator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py
+[2024-06-27T10:44:07.154+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.153+0700] {dag.py:2742} INFO - Sync 3 DAGs
+[2024-06-27T10:44:07.175+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.174+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator to 2022-01-01T00:00:00+00:00, run_after=2022-01-01T00:00:00+00:00
+[2024-06-27T10:44:07.177+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.177+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2024-06-27T10:44:07.178+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.178+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2024-06-27T10:44:07.185+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.185+0700] {dag.py:2742} INFO - Sync 2 DAGs
+[2024-06-27T10:44:07.189+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.189+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-1 to None, run_after=None
+[2024-06-27T10:44:07.189+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:07.189+0700] {dag.py:3504} INFO - Setting next_dagrun for example_subdag_operator.section-2 to None, run_after=None
+[2024-06-27T10:44:07.202+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_subdag_operator.py took 0.100 seconds

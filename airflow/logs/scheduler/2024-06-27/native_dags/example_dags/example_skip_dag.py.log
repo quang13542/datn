@@ -1,0 +1,25 @@
+[2024-06-27T10:42:37.384+0700] {processor.py:157} INFO - Started process (PID=23290) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:42:37.385+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2024-06-27T10:42:37.385+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:37.385+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:42:37.392+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_skip_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:42:37.484+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:37.484+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_skip_dag
+[2024-06-27T10:42:37.494+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:37.493+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_skip_dag
+[2024-06-27T10:42:37.500+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:37.500+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_skip_dag
+[2024-06-27T10:42:37.510+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:37.510+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:37.520+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:37.520+0700] {dag.py:2763} INFO - Creating ORM DAG for example_skip_dag
+[2024-06-27T10:42:37.528+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:37.528+0700] {dag.py:3504} INFO - Setting next_dagrun for example_skip_dag to 2024-06-26T03:42:37.528022+00:00, run_after=2024-06-27T03:42:37.528022+00:00
+[2024-06-27T10:42:37.545+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py took 0.165 seconds
+[2024-06-27T10:43:28.248+0700] {processor.py:157} INFO - Started process (PID=23490) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:43:28.254+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2024-06-27T10:43:28.257+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:28.256+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:43:28.276+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_skip_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:43:28.366+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:28.366+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:28.411+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:28.411+0700] {dag.py:3504} INFO - Setting next_dagrun for example_skip_dag to 2024-06-26T03:43:28.410643+00:00, run_after=2024-06-27T03:43:28.410643+00:00
+[2024-06-27T10:43:28.448+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py took 0.205 seconds
+[2024-06-27T10:44:19.062+0700] {processor.py:157} INFO - Started process (PID=23683) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:44:19.068+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py for tasks to queue
+[2024-06-27T10:44:19.069+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:19.069+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:44:19.083+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_skip_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py
+[2024-06-27T10:44:19.102+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:19.102+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:44:19.120+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:19.120+0700] {dag.py:3504} INFO - Setting next_dagrun for example_skip_dag to 2024-06-26T03:44:19.120204+00:00, run_after=2024-06-27T03:44:19.120204+00:00
+[2024-06-27T10:44:19.147+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_skip_dag.py took 0.091 seconds

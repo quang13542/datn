@@ -1,0 +1,32 @@
+[2024-06-27T10:12:17.723+0700] {processor.py:157} INFO - Started process (PID=17613) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:12:17.727+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-06-27T10:12:17.729+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:17.728+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:12:17.750+0700] {processor.py:836} INFO - DAG(s) dict_keys(['tutorial_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:12:17.876+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:17.876+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:tutorial_dag
+[2024-06-27T10:12:17.887+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:17.886+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:tutorial_dag
+[2024-06-27T10:12:17.896+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:17.896+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:tutorial_dag
+[2024-06-27T10:12:17.910+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:17.910+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:12:17.919+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:17.918+0700] {dag.py:2763} INFO - Creating ORM DAG for tutorial_dag
+[2024-06-27T10:12:17.931+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:12:17.931+0700] {dag.py:3504} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-06-27T10:12:17.952+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py took 0.239 seconds
+[2024-06-27T10:42:16.656+0700] {processor.py:157} INFO - Started process (PID=23210) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:42:16.662+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-06-27T10:42:16.663+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:16.663+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:42:16.675+0700] {processor.py:836} INFO - DAG(s) dict_keys(['tutorial_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:42:16.698+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:16.698+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:16.715+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:16.715+0700] {dag.py:3504} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-06-27T10:42:16.744+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py took 0.092 seconds
+[2024-06-27T10:43:07.901+0700] {processor.py:157} INFO - Started process (PID=23419) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:43:07.906+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-06-27T10:43:07.907+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:07.907+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:43:07.915+0700] {processor.py:836} INFO - DAG(s) dict_keys(['tutorial_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:43:07.945+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:07.945+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:07.975+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:07.975+0700] {dag.py:3504} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-06-27T10:43:07.999+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py took 0.104 seconds
+[2024-06-27T10:43:52.848+0700] {processor.py:157} INFO - Started process (PID=23578) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:43:52.853+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py for tasks to queue
+[2024-06-27T10:43:52.854+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:52.854+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:43:52.860+0700] {processor.py:836} INFO - DAG(s) dict_keys(['tutorial_dag']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py
+[2024-06-27T10:43:52.884+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:52.884+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:52.913+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:52.913+0700] {dag.py:3504} INFO - Setting next_dagrun for tutorial_dag to None, run_after=None
+[2024-06-27T10:43:52.943+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/tutorial_dag.py took 0.099 seconds

@@ -1,0 +1,18 @@
+[2024-06-27T10:42:47.981+0700] {processor.py:157} INFO - Started process (PID=23327) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2024-06-27T10:42:47.982+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py for tasks to queue
+[2024-06-27T10:42:47.983+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:47.983+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2024-06-27T10:42:47.998+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_dag_decorator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2024-06-27T10:42:48.090+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:48.090+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_dag_decorator
+[2024-06-27T10:42:48.101+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:48.101+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_dag_decorator
+[2024-06-27T10:42:48.107+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:48.107+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_dag_decorator
+[2024-06-27T10:42:48.118+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:48.118+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:48.126+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:48.126+0700] {dag.py:2763} INFO - Creating ORM DAG for example_dag_decorator
+[2024-06-27T10:42:48.134+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:48.133+0700] {dag.py:3504} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
+[2024-06-27T10:42:48.151+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py took 0.176 seconds
+[2024-06-27T10:43:39.890+0700] {processor.py:157} INFO - Started process (PID=23534) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2024-06-27T10:43:39.896+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py for tasks to queue
+[2024-06-27T10:43:39.900+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:39.899+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2024-06-27T10:43:39.925+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_dag_decorator']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py
+[2024-06-27T10:43:40.063+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:40.063+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:40.085+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:40.085+0700] {dag.py:3504} INFO - Setting next_dagrun for example_dag_decorator to None, run_after=None
+[2024-06-27T10:43:40.114+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_dag_decorator.py took 0.235 seconds

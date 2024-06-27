@@ -1,0 +1,18 @@
+[2024-06-27T10:42:57.895+0700] {processor.py:157} INFO - Started process (PID=23359) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py
+[2024-06-27T10:42:57.897+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2024-06-27T10:42:57.898+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:57.898+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py
+[2024-06-27T10:42:57.912+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_branch_labels']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py
+[2024-06-27T10:42:58.010+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:58.009+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_branch_labels
+[2024-06-27T10:42:58.021+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:58.020+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_branch_labels
+[2024-06-27T10:42:58.028+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:58.027+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_branch_labels
+[2024-06-27T10:42:58.038+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:58.038+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:58.047+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:58.046+0700] {dag.py:2763} INFO - Creating ORM DAG for example_branch_labels
+[2024-06-27T10:42:58.056+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:58.056+0700] {dag.py:3504} INFO - Setting next_dagrun for example_branch_labels to 2024-06-26T00:00:00+00:00, run_after=2024-06-27T00:00:00+00:00
+[2024-06-27T10:42:58.073+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py took 0.183 seconds
+[2024-06-27T10:44:04.649+0700] {processor.py:157} INFO - Started process (PID=23628) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py
+[2024-06-27T10:44:04.654+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py for tasks to queue
+[2024-06-27T10:44:04.655+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:04.654+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py
+[2024-06-27T10:44:04.668+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_branch_labels']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py
+[2024-06-27T10:44:04.698+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:04.698+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:44:04.735+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:44:04.735+0700] {dag.py:3504} INFO - Setting next_dagrun for example_branch_labels to 2024-06-26T00:00:00+00:00, run_after=2024-06-27T00:00:00+00:00
+[2024-06-27T10:44:04.800+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_branch_labels.py took 0.157 seconds

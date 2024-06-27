@@ -1,0 +1,18 @@
+[2024-06-27T10:42:46.593+0700] {processor.py:157} INFO - Started process (PID=23322) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py
+[2024-06-27T10:42:46.594+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-06-27T10:42:46.596+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:46.595+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py
+[2024-06-27T10:42:46.614+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_complex']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py
+[2024-06-27T10:42:46.718+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:46.718+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:example_complex
+[2024-06-27T10:42:46.731+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:46.731+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:example_complex
+[2024-06-27T10:42:46.739+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:46.738+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:example_complex
+[2024-06-27T10:42:46.749+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:46.749+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:46.757+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:46.757+0700] {dag.py:2763} INFO - Creating ORM DAG for example_complex
+[2024-06-27T10:42:46.765+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:46.765+0700] {dag.py:3504} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-06-27T10:42:46.784+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py took 0.196 seconds
+[2024-06-27T10:43:38.287+0700] {processor.py:157} INFO - Started process (PID=23529) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py
+[2024-06-27T10:43:38.293+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py for tasks to queue
+[2024-06-27T10:43:38.294+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:38.294+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py
+[2024-06-27T10:43:38.326+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_complex']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py
+[2024-06-27T10:43:38.367+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:38.367+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:38.390+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:38.390+0700] {dag.py:3504} INFO - Setting next_dagrun for example_complex to None, run_after=None
+[2024-06-27T10:43:38.416+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_complex.py took 0.136 seconds

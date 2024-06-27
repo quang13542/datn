@@ -1,0 +1,18 @@
+[2024-06-27T10:42:45.222+0700] {processor.py:157} INFO - Started process (PID=23315) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-06-27T10:42:45.223+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py for tasks to queue
+[2024-06-27T10:42:45.224+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:45.223+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-06-27T10:42:45.231+0700] {processor.py:836} INFO - DAG(s) dict_keys(['latest_only_with_trigger']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-06-27T10:42:45.340+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:45.339+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:latest_only_with_trigger
+[2024-06-27T10:42:45.349+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:45.349+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:latest_only_with_trigger
+[2024-06-27T10:42:45.357+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:45.357+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:latest_only_with_trigger
+[2024-06-27T10:42:45.389+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:45.388+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:42:45.397+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:45.397+0700] {dag.py:2763} INFO - Creating ORM DAG for latest_only_with_trigger
+[2024-06-27T10:42:45.407+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:42:45.407+0700] {dag.py:3504} INFO - Setting next_dagrun for latest_only_with_trigger to 2024-06-26T23:42:45.406806+00:00, run_after=2024-06-27T03:42:45.406806+00:00
+[2024-06-27T10:42:45.428+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py took 0.209 seconds
+[2024-06-27T10:43:37.133+0700] {processor.py:157} INFO - Started process (PID=23522) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-06-27T10:43:37.138+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py for tasks to queue
+[2024-06-27T10:43:37.140+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:37.139+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-06-27T10:43:37.155+0700] {processor.py:836} INFO - DAG(s) dict_keys(['latest_only_with_trigger']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+[2024-06-27T10:43:37.195+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:37.194+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-27T10:43:37.221+0700] {logging_mixin.py:150} INFO - [2024-06-27T10:43:37.221+0700] {dag.py:3504} INFO - Setting next_dagrun for latest_only_with_trigger to 2024-06-26T23:43:37.221283+00:00, run_after=2024-06-27T03:43:37.221283+00:00
+[2024-06-27T10:43:37.266+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_latest_only_with_trigger.py took 0.140 seconds
