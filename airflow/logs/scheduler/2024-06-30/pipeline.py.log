@@ -1,0 +1,21 @@
+[2024-06-30T21:11:06.218+0700] {processor.py:157} INFO - Started process (PID=54575) to work on /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:11:06.219+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py for tasks to queue
+[2024-06-30T21:11:06.219+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:11:06.219+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:11:06.231+0700] {processor.py:836} INFO - DAG(s) dict_keys(['ETL']) retrieved from /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:11:06.331+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:11:06.331+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:11:06.347+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:11:06.347+0700] {dag.py:3504} INFO - Setting next_dagrun for ETL to 2024-01-01T00:00:00+00:00, run_after=2024-01-02T00:00:00+00:00
+[2024-06-30T21:11:06.369+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py took 0.154 seconds
+[2024-06-30T21:22:47.423+0700] {processor.py:157} INFO - Started process (PID=56630) to work on /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:22:47.428+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py for tasks to queue
+[2024-06-30T21:22:47.429+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:47.428+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:22:47.442+0700] {processor.py:836} INFO - DAG(s) dict_keys(['ETL']) retrieved from /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:22:47.450+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:47.450+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:22:47.468+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:47.468+0700] {dag.py:3504} INFO - Setting next_dagrun for ETL to 2024-01-01T00:00:00+00:00, run_after=2024-01-02T00:00:00+00:00
+[2024-06-30T21:22:47.486+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py took 0.066 seconds
+[2024-06-30T21:24:01.566+0700] {processor.py:157} INFO - Started process (PID=57143) to work on /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:24:01.568+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py for tasks to queue
+[2024-06-30T21:24:01.569+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:01.569+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:24:01.585+0700] {processor.py:836} INFO - DAG(s) dict_keys(['ETL']) retrieved from /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py
+[2024-06-30T21:24:01.684+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:01.684+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:24:01.700+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:01.699+0700] {dag.py:3504} INFO - Setting next_dagrun for ETL to 2024-01-01T00:00:00+00:00, run_after=2024-01-02T00:00:00+00:00
+[2024-06-30T21:24:01.722+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/airflow/dags/pipeline.py took 0.158 seconds

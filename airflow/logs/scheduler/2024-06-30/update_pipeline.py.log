@@ -1,0 +1,18 @@
+[2024-06-30T21:22:46.140+0700] {processor.py:157} INFO - Started process (PID=56612) to work on /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py
+[2024-06-30T21:22:46.141+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py for tasks to queue
+[2024-06-30T21:22:46.142+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:46.142+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py
+[2024-06-30T21:22:46.152+0700] {processor.py:836} INFO - DAG(s) dict_keys(['ETL']) retrieved from /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py
+[2024-06-30T21:22:46.259+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:46.259+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:22:46.275+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:46.274+0700] {dag.py:3504} INFO - Setting next_dagrun for ETL to 2024-01-01T00:00:00+00:00, run_after=2024-01-02T00:00:00+00:00
+[2024-06-30T21:22:46.298+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py took 0.161 seconds
+[2024-06-30T21:24:00.184+0700] {processor.py:157} INFO - Started process (PID=57123) to work on /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py
+[2024-06-30T21:24:00.204+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py for tasks to queue
+[2024-06-30T21:24:00.206+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:00.205+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py
+[2024-06-30T21:24:00.216+0700] {processor.py:836} INFO - DAG(s) dict_keys(['update_pipeline']) retrieved from /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py
+[2024-06-30T21:24:00.327+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:00.327+0700] {manager.py:504} INFO - Created Permission View: can edit on DAG:update_pipeline
+[2024-06-30T21:24:00.337+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:00.336+0700] {manager.py:504} INFO - Created Permission View: can read on DAG:update_pipeline
+[2024-06-30T21:24:00.344+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:00.344+0700] {manager.py:504} INFO - Created Permission View: can delete on DAG:update_pipeline
+[2024-06-30T21:24:00.354+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:00.354+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:24:00.362+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:00.361+0700] {dag.py:2763} INFO - Creating ORM DAG for update_pipeline
+[2024-06-30T21:24:00.369+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:00.369+0700] {dag.py:3504} INFO - Setting next_dagrun for update_pipeline to 2024-01-01T00:00:00+00:00, run_after=2024-01-02T00:00:00+00:00
+[2024-06-30T21:24:00.410+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/airflow/dags/update_pipeline.py took 0.228 seconds

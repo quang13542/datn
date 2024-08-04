@@ -1,0 +1,21 @@
+[2024-06-30T21:11:09.851+0700] {processor.py:157} INFO - Started process (PID=54615) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:11:09.852+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2024-06-30T21:11:09.853+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:11:09.852+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:11:09.861+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:11:09.882+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:11:09.882+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:11:09.899+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:11:09.899+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2024-06-30T21:11:09.925+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py took 0.076 seconds
+[2024-06-30T21:22:50.875+0700] {processor.py:157} INFO - Started process (PID=56655) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:22:50.880+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2024-06-30T21:22:50.881+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:50.880+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:22:50.890+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:22:50.914+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:50.914+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:22:50.931+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:22:50.931+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2024-06-30T21:22:50.957+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py took 0.084 seconds
+[2024-06-30T21:24:05.145+0700] {processor.py:157} INFO - Started process (PID=57165) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:24:05.149+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py for tasks to queue
+[2024-06-30T21:24:05.151+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:05.150+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:24:05.171+0700] {processor.py:836} INFO - DAG(s) dict_keys(['example_xcom']) retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py
+[2024-06-30T21:24:05.210+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:05.210+0700] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-06-30T21:24:05.229+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:05.229+0700] {dag.py:3504} INFO - Setting next_dagrun for example_xcom to 2021-01-01T00:00:00+00:00, run_after=2021-01-01T00:00:00+00:00
+[2024-06-30T21:24:05.252+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/example_xcom.py took 0.113 seconds

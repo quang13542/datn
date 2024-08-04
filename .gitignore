@@ -3,3 +3,4 @@ venv/
 .env
 combined_source/
 .combined_source
+./airflow/logs/

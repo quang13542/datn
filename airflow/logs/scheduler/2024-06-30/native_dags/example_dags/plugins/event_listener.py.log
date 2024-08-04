@@ -1,0 +1,5 @@
+[2024-06-30T21:24:15.141+0700] {processor.py:157} INFO - Started process (PID=57233) to work on /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/event_listener.py
+[2024-06-30T21:24:15.142+0700] {processor.py:826} INFO - Processing file /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/event_listener.py for tasks to queue
+[2024-06-30T21:24:15.143+0700] {logging_mixin.py:150} INFO - [2024-06-30T21:24:15.142+0700] {dagbag.py:541} INFO - Filling up the DagBag from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/event_listener.py
+[2024-06-30T21:24:15.145+0700] {processor.py:838} WARNING - No viable dags retrieved from /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/event_listener.py
+[2024-06-30T21:24:15.158+0700] {processor.py:179} INFO - Processing /home/laptop24h/Project/HUST/datn/venv/lib/python3.10/site-packages/airflow/example_dags/plugins/event_listener.py took 0.021 seconds

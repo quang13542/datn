@@ -45,6 +45,8 @@ from visual_datn.Prescriptive import (
     visual_critical_skills,
     visual_job_roles_by_skill
 )
+from crawler_datn.ITjobs_update_status import update_ITjobs_status
+from crawler_datn.TopCV_update_status import update_TopCV_status
 
 sys.path.append(os.getcwd())
 

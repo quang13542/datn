@@ -1,2 +1,43 @@
-6637    https://www.topcv.vn/viec-lam/senior-android-d...
-Name: url, dtype: object
+dict_keys(['text', 'metadata'])
+{'source': 'TopDev', 'created_date': '2024-04-18 11:11:32'}
+Specialist/ Supervisor, Java Software Engineer
+Chubb Life Vietnam
+Head Office at: Tầng 21, Sun Wah Tower, 115 Nguyễn Huệ, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh
+Đăng nhập để xem mức lương
+Mô tả công việc
+Giới thiệu về công ty
+Trách nhiệm công việc
+Develop custom templates using Crystal or Jasper tools
+Develop, build new features, design from front-end to back-end according to each project of the company
+Write APIs/ use APIs to connect with third party
+Perform maintenance work and Develop new features according to the assigned work arrangement
+Other tasks for project supporting as assigned by Head of department
+Kỹ năng & Chuyên môn
+Bachelor degree in IT/ Computer science
+From 3 years experience in Java/ Java EE
+Proficient in Spring Ecosystem, such as: Spring Boot, Spring Security, Spring Batch is a plus
+Knowledge of Jasper/ Crystal report, iReport or report generating/developing tools
+Experience in Restful API development Javascript, Typescript, HTML5, SASS/ CSS3, Angular framework and responsive design
+Experience working in insurance industry is a plus
+Nice to have if possess experience in mobile cross platform development, CI/ CD tools and Cloud services
+Phúc lợi dành cho bạn
+Career evolution
+Skills development
+Training program
+Health care insurance by Bao Minh and social insurance
+Annual company trips oversea or in Vietnam
+Sport Club: Badminton, Football, Dance
+Lunch & Parking fee allowance
+Công ty
+Chubb Life Vietnam
+Ngành nghề
+Finance, Bảo Hiểm
+Quy mô công ty
+500-999
+Quốc tịch công ty
+Vietnam
+Về chúng tôi
+Chubb Life Vietnam
+Chubb Life is the international life insurance division of Chubb. In Asia, Chubb Life operates in Hong Kong SAR, Indonesia, Korea, Myanmar, Taiwan, Thailand and Vietnam, and participates in a joint-venture in China. Chubb Life has been in Vietnam since 2005, and launched its Fund Management
+đọc thêm
+Xem công ty

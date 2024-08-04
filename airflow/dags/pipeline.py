@@ -82,8 +82,8 @@ with DAG(
         trigger_rule=TriggerRule.ALL_DONE,
     )
 
-    upsert_task = BashOperator(
-        task_id="upsert",
+    insert_task = BashOperator(
+        task_id="insert",
         bash_command="python3 main.py upsert_data",
     )
 
@@ -104,4 +104,4 @@ with DAG(
 
     [extract_TopCV_task, extract_TopDev_task, extract_ITViec_task, extract_ITjobs_task] >> combine_task
 
-    combine_task >> upsert_task
+    combine_task >> insert_task
